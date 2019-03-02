@@ -1,0 +1,323 @@
+﻿<Page
+    x:Class="UniversalKeepTheRhythm.Views.ProgressPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalKeepTheRhythm.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+        xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:vm="using:UniversalKeepTheRhythm.ViewModels" 
+    xmlns:ut="using:UniversalKeepTheRhythm.Converters"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      RequestedTheme="Dark"
+    >
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ut:ProgressStyleConverter x:Key="styleConverter"/>
+
+            <DataTemplate x:Key="TextMapTemplate" x:DataType="vm:TextMap">
+                <StackPanel Style="{x:Bind PanelStyleText}" maps:MapControl.Location="{x:Bind Location}" maps:MapControl.NormalizedAnchorPoint="0,1">
+                    <TextBlock Text="{x:Bind Title}" Style="{x:Bind StyleText}"/>
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate x:Key="LoopTextMapTemplate" x:DataType="vm:LoopTextMap">
+                <StackPanel Style="{x:Bind PanelStyleText}" maps:MapControl.Location="{x:Bind Location}" 
+                            maps:MapControl.NormalizedAnchorPoint="0.5,0.5" Tapped="{x:Bind Tapped}" Tag="{x:Bind Tag}">
+                    <TextBlock Text="{x:Bind Title}" Style="{x:Bind StyleText}"/>
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate x:Key="PointMapTemplate" x:DataType="vm:ShowInfoCanvas">
+                <StackPanel maps:MapControl.Location="{x:Bind Location}" 
+                            maps:MapControl.NormalizedAnchorPoint="0,1" Opacity="0.5" Background="White" Margin="4">
+                    <TextBlock Text="{x:Bind point, Mode=OneWay, Converter={StaticResource distanceConverter}}" Foreground="Black" Name="point"  />
+                    <TextBlock Text="{x:Bind time, Mode=OneWay, Converter={StaticResource timeConverter}}" Foreground="Black" Name="time"  />
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate x:Key="SpeedPointMapTemplate" x:DataType="vm:SpeedPointMap">
+                <StackPanel maps:MapControl.Location="{x:Bind Location}" 
+                            maps:MapControl.NormalizedAnchorPoint="0,1" Opacity="0.5" Background="White" Margin="4">
+                    <TextBlock Text="{x:Bind Distance, Mode=OneWay, Converter={StaticResource distanceConverter}}" Foreground="Black" Name="point"  />
+                    <TextBlock Text="{x:Bind Speed, Mode=OneWay, Converter={StaticResource speedConverter}}" Foreground="Black" Name="time"  />
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate x:Key="PacePointMapTemplate" x:DataType="vm:PacePointMap">
+                <StackPanel maps:MapControl.Location="{x:Bind Location}" 
+                            maps:MapControl.NormalizedAnchorPoint="0,1" Opacity="0.5" Background="White" Margin="4">
+                    <TextBlock Text="{x:Bind Distance, Mode=OneWay, Converter={StaticResource distanceConverter}}" Foreground="Black" Name="point"  />
+                    <TextBlock Text="{x:Bind Pace, Mode=OneWay, Converter={StaticResource paceConverter}}" Foreground="Black" Name="time"  />
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate x:Key="PolylineMapTemplate" x:DataType="vm:PolylineMap">
+                <StackPanel></StackPanel>
+                <!--<maps:MapPolyline Path="{x:Bind MapRoute, Mode=OneWay}" StrokeColor="{x:Bind StrokeColor}" StrokeThickness="{x:Bind StrokeThickness}"/>-->
+            </DataTemplate>
+
+            <DataTemplate x:Key="EllipseMapTemplate" x:DataType="vm:EllipseMap">
+                <Ellipse Width="{x:Bind Width, Mode=OneWay}" 
+                     maps:MapControl.Location="{x:Bind Location, Mode=TwoWay}"
+                     maps:MapControl.NormalizedAnchorPoint="0.5,0.5"
+                     Height="{x:Bind Height, Mode=OneWay}" 
+                     Style="{x:Bind PanelStyleText, Mode=OneWay}" />
+            </DataTemplate>
+
+            <ut:MapsSelector x:Key="mapSelector"
+                TextMapTemplate="{StaticResource TextMapTemplate}"
+                PointMapTemplate="{StaticResource PointMapTemplate}"
+                LoopTextMapTemplate="{StaticResource LoopTextMapTemplate}"
+                SpeedPointMapTemplate="{StaticResource SpeedPointMapTemplate}"
+                PacePointMapTemplate="{StaticResource PacePointMapTemplate}"
+                               PolylineMapTemplate="{StaticResource PolylineMapTemplate}"
+                             EllipseMapTemplate="{StaticResource EllipseMapTemplate}"
+            />
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <vm:ProgressViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Grid Margin="12,0,12,0" Style="{x:Bind ViewModel.Status, Converter={StaticResource styleConverter}, ConverterParameter=progressGrid}" 
+           Name="LayoutRoot" SizeChanged="LayoutRoot_SizeChanged">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30*" x:Name="lastRow"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- -->
+        <MediaPlayerElement x:Name="player" AreTransportControlsEnabled="False" HorizontalAlignment="Stretch"  Grid.Row="0"/>
+
+
+        <maps:MapControl  Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="6" 
+                          MapServiceToken="{x:Bind ViewModel.MapServiceToken, Mode=OneTime}"
+                Name="map1" 
+                 Center="{x:Bind ViewModel.MapCenter, Mode=OneWay}"
+                Style="{x:Bind ViewModel.CurrentMapStyle, Mode=OneWay}" 
+                   Visibility="{x:Bind ViewModel.MapVisibility, Mode=OneWay}" 
+                          ColorScheme="{x:Bind ViewModel.MapColor, Mode=OneWay}" 
+                ZoomLevel="{x:Bind ViewModel.CurrentMapZoomLevel, Mode=TwoWay}"                           >
+
+            <maps:MapItemsControl ItemsSource="{x:Bind ViewModel.LandmarkLayer, Mode=OneWay}" >
+                <maps:MapItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <ContentControl Content="{Binding}" ContentTemplateSelector="{StaticResource mapSelector}" />
+                    </DataTemplate>
+                </maps:MapItemsControl.ItemTemplate>
+            </maps:MapItemsControl>
+
+        </maps:MapControl>
+
+        <Grid Name="speedCanvas" Visibility="{x:Bind ViewModel.SpeedCanvasVisibility, Mode=TwoWay}"  Grid.Row="0" Grid.Column="0" Margin="20"  Grid.ColumnSpan="6" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Name="rthymthmRect" Grid.Column="0" Grid.Row="0" Height="60" Width="60" Style="{x:Bind ViewModel.RthymthmRectStyle, Mode=OneWay}"/>
+
+            <TextBlock Name="C0" Text="{x:Bind ViewModel.C0, Mode=OneWay}" Grid.Column="1" Grid.Row="0" Style="{x:Bind ViewModel.C0Style, Mode=OneWay}" />
+            <TextBlock Name="C1" Text="{x:Bind ViewModel.C1, Mode=OneWay}" Grid.Column="2" Grid.Row="0" Style="{x:Bind ViewModel.C1Style, Mode=OneWay}"  />
+
+            <TextBlock Name="INFO_TRIGGER" Text="{x:Bind ViewModel.Info, Mode=OneWay}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="6" Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressTextInfo}" />
+            <TextBlock Name="time" Text="{x:Bind ViewModel.Time, Mode=OneWay,Converter={StaticResource timeConverter}}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6"  Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressTextTime}" />
+            <TextBlock Name="distance" Text="{x:Bind ViewModel.Distance, Mode=OneWay, Converter={StaticResource distanceConverter}}" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5"  Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressTextDistance}"   />
+            <TextBlock Name="speed" Text="{x:Bind ViewModel.Speed, Mode=OneWay,Converter={StaticResource speedConverter}}" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Style="{x:Bind ViewModel.SpeedStyle, Mode=OneWay}" Tapped="{x:Bind ViewModel.SpeedCommand, Mode=OneTime}"/>
+            <TextBlock Name="altitude" Text="{x:Bind ViewModel.Altitude, Mode=OneWay,Converter={StaticResource altitudeConverter}}" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressText}"  />
+
+            <Image Width="30" Source="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=appbar.upload.png}" Name="upload" Grid.Column="0" Grid.Row="5" />
+            <TextBlock Name="ascendent" Text="{x:Bind ViewModel.Ascendent, Mode=OneWay,Converter={StaticResource altitudeConverter}}"  Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressText}"/>
+
+            <Image Width="30" Source="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=appbar.download.png}" Name="download" Grid.Column="3" Grid.Row="5"  />
+            <TextBlock Name="descendent" Text="{x:Bind ViewModel.Descendent, Mode=OneWay,Converter={StaticResource altitudeConverter}}"  Grid.Column="4" Grid.Row="5" Grid.ColumnSpan="2" Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressText}"  />
+
+            <TextBlock x:Name="dist" Text="{x:Bind ViewModel.Dist, Mode=OneWay}" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="6"   Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressText}"  />
+
+            <TextBlock x:Name="txtCurrentTrack" TextWrapping="Wrap" Text="{x:Bind ViewModel.TxtCurrentTrack, Mode=OneWay}" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="6"   Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressTextSmall}"  />
+
+        </Grid>
+
+        <Rectangle Name="statusRect1" Visibility="{x:Bind ViewModel.StatusRect1Visibility, Mode=OneWay}" Grid.Column="3" Grid.Row="0"  Height="50" VerticalAlignment="Top" Style="{x:Bind ViewModel.StatusRect1Style, Mode=OneWay}"/>
+        <Rectangle Name="statusRect2" Visibility="{x:Bind ViewModel.StatusRect2Visibility, Mode=OneWay}" Grid.Column="4" Grid.Row="0"  Height="50" VerticalAlignment="Top" Style="{x:Bind ViewModel.StatusRect2Style, Mode=OneWay}"/>
+        <Rectangle Name="statusRect3" Visibility="{x:Bind ViewModel.StatusRect3Visibility, Mode=OneWay}" Grid.Column="5" Grid.Row="0"  Height="50" VerticalAlignment="Top" Style="{x:Bind ViewModel.StatusRect3Style, Mode=OneWay}"/>
+
+        <TextBlock Name="waitText1" Visibility="{x:Bind ViewModel.WaitText1Visibility, Mode=OneWay}"  Text="{x:Bind ViewModel.WaitText1, Mode=OneWay}" TextAlignment="Center" Grid.Column="3" Grid.Row="0" TextWrapping="NoWrap" VerticalAlignment="Top" Style="{x:Bind ViewModel.WaitText1Style, Mode=OneWay}"/>
+        <TextBlock Name="waitText2" Visibility="{x:Bind ViewModel.WaitText2Visibility, Mode=OneWay}" Text="{x:Bind ViewModel.WaitText2, Mode=OneWay}" TextAlignment="Center" Grid.Column="4" Grid.Row="0" TextWrapping="NoWrap" VerticalAlignment="Top" Style="{x:Bind ViewModel.WaitText2Style, Mode=OneWay}"/>
+        <TextBlock Name="waitText3" Visibility="{x:Bind ViewModel.WaitText3Visibility, Mode=OneWay}"  Text="{x:Bind ViewModel.WaitText3, Mode=OneWay}" TextAlignment="Center" Grid.Column="5" Grid.Row="0" TextWrapping="NoWrap" VerticalAlignment="Top" Style="{x:Bind ViewModel.WaitText3Style, Mode=OneWay}"/>
+
+
+        <Grid Name="speedCanvas3" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="6">
+        </Grid>
+        <!--
+        <Image Grid.Column="0" Grid.Row="0" Name="help" Visibility="Collapsed" Source="{Binding Converter={StaticResource styleConverter}, ConverterParameter=appbar.questionmark.rest.png}"  VerticalAlignment="Top"/>
+-->
+
+        <Button Grid.Column="0" Grid.Row="1" Command="{x:Bind ViewModel.FollowAction, Mode=OneTime}"  Visibility="{x:Bind ViewModel.FollowVisibility, Mode=OneWay}"  Name="follow" VerticalAlignment="Bottom">
+            <Image Width="30" Source="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=map.centerme.png}"  />
+        </Button>
+        <Button Grid.Column="1" Grid.Row="1" Command="{x:Bind ViewModel.MapTypeAction, Mode=OneTime}"  Visibility="{x:Bind ViewModel.MapTypeVisibility, Mode=OneWay}"  Name="mapType" VerticalAlignment="Bottom">
+            <Image Width="30" Source="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=photo.redeyes.png}" />
+        </Button>
+        <Button Grid.Column="2" Grid.Row="1" Command="{x:Bind ViewModel.MapLightAction, Mode=OneTime}"  Visibility="{x:Bind ViewModel.MapLightVisibility, Mode=OneWay}" Name="mapLight" VerticalAlignment="Bottom">
+            <Image Width="30" Source="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=photo.light.off.png}" />
+        </Button>
+        <Button Grid.Column="3" Grid.Row="1" Command="{x:Bind ViewModel.CompassAction, Mode=OneTime}"  Visibility="{x:Bind ViewModel.CompassVisibility, Mode=OneWay}" Name="ifollowCompass" VerticalAlignment="Bottom">
+            <Image Width="30" Source="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=map.direction.png}" />
+        </Button>
+        <Button Grid.Column="4" Grid.Row="1" Command="{x:Bind ViewModel.RotateAction, Mode=OneTime}"  Visibility="{x:Bind ViewModel.RotateVisibility, Mode=OneWay}" Name="rotateOption" VerticalAlignment="Bottom" >
+            <Image Width="30" Source="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=appbar.sync.rest.png}" />
+        </Button>
+        <Button Grid.Column="5" Grid.Row="1" Command="{x:Bind ViewModel.LocateAction, Mode=OneTime}"  Visibility="{x:Bind ViewModel.LocatedVisibility, Mode=OneWay}" Name="located" VerticalAlignment="Bottom">
+            <Image Width="30" Source="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=appbar.map.png}" />
+        </Button>
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" Name="ctls" Visibility="{x:Bind ViewModel.ctlsVisibility, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Name="buttonStop" Command="{x:Bind ViewModel.StopAction, Mode=OneTime}" Visibility="{x:Bind ViewModel.StopVisibility, Mode=OneWay}" Content="Stop" Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressStop}" />
+            <Button Grid.Column="1" Name="buttonPause" Command="{x:Bind ViewModel.PauseAction, Mode=OneTime}"  Visibility="{x:Bind ViewModel.PauseVisibility, Mode=OneWay}"  Content="Pause" Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressPause}"/>
+            <Button Grid.Column="1" Name="buttonResume" Command="{x:Bind ViewModel.ResumeAction, Mode=OneTime}" Visibility="{x:Bind ViewModel.ResumeVisibility, Mode=OneWay}"  Content="Resume" Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressResume}" />
+            <Button Grid.Column="1" Name="buttonReallyStart" Command="{x:Bind ViewModel.StartAction, Mode=OneTime}" Visibility="{x:Bind ViewModel.StartVisibility, Mode=OneWay}" IsEnabled="{x:Bind ViewModel.StartEnabled, Mode=OneWay}" Content="Really Start" Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=progressStart}"/>
+        </Grid>
+
+        <Rectangle Name="fondo" Visibility="{x:Bind ViewModel.FondoVisibility, Mode=TwoWay}"  Fill="Transparent" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6"
+                      ManipulationMode="All" Tapped="{x:Bind ViewModel.QuestionPopupTapped}" DoubleTapped="{x:Bind ViewModel.QuestionPopupDoubleTapped}" Holding="{x:Bind ViewModel.QuestionPopupHolding}">
+        </Rectangle>
+
+        <Popup  x:Name="questionPopup"  IsOpen="{x:Bind ViewModel.QuestionPopup, Mode=TwoWay}"  Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="6"
+                 Opened="{x:Bind ViewModel.QuestionOpened}" Closed="{x:Bind ViewModel.QuestionClosed}" >
+            <Grid x:Name="LayoutMainPP" 
+                    Width="{x:Bind questionPopup.Width, Mode=OneWay}" Height="{x:Bind questionPopup.Height, Mode=OneWay}"
+                    Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=gridPP}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="timePP" Grid.Row="1" Text="{x:Bind ViewModel.timePP, Mode=OneWay}" 
+                           Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=timePP}" />
+                <TextBlock x:Name="msgPP" Grid.Row="2" Text="{x:Bind ViewModel.msgPP, Mode=OneWay}"
+                           Style="{x:Bind ViewModel.Status,  Converter={StaticResource styleConverter}, ConverterParameter=msgPP}" />
+
+                <Rectangle Fill="Transparent" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Tapped="{x:Bind ViewModel.QuestionPopupTapped}"
+                      DoubleTapped="{x:Bind ViewModel.QuestionPopupDoubleTapped}"  Holding="{x:Bind ViewModel.QuestionPopupHolding}" >
+                </Rectangle>
+            </Grid>
+        </Popup>
+
+        <Popup  x:Name="addPointPopup"  IsOpen="{x:Bind ViewModel.PointPopup, Mode=TwoWay}"  Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="6"
+               Opened="{x:Bind ViewModel.AddPointOpened}" Closed="{x:Bind ViewModel.AddPointClosed}" >
+            <Grid Width="{x:Bind addPointPopup.Width, Mode=OneWay}" Height="{x:Bind addPointPopup.Height, Mode=OneWay}"
+                Background="Black">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="1" Text="LocalizedResources.AddPoint"
+                           Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock Grid.Row="2" Text="LocalizedResources.PointDescription"
+                           Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBox Grid.Row="3" x:Name="pointDescription" ></TextBox>
+            </Grid>
+        </Popup>
+
+        <Popup x:Name="helpInfo" IsOpen="{x:Bind ViewModel.HelpInfo, Mode=TwoWay}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"  Grid.ColumnSpan="6">
+            <ScrollViewer Background="Black" Width="{x:Bind helpInfo.Width, Mode=OneWay}" Height="{x:Bind helpInfo.Height, Mode=OneWay}" Tapped="{x:Bind ViewModel.HelpInfoClose}">
+                <RelativePanel>
+                    <TextBlock x:Name="p0" Text="En la vista normal" FontSize="24" x:Uid="ac00"/>
+                    <Grid x:Name="ac6_" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="p0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Name="ac0" Grid.Row="0" Grid.Column="0" TextWrapping="WrapWholeWords" Text="Toca la pantalla para" Style="{ThemeResource labelText}" x:Uid="ac0"/>
+                        <TextBlock Grid.Row="0"  Grid.Column="1"  TextWrapping="WrapWholeWords" Text="{x:Bind ViewModel.Action0}" Margin="4,0,0,0" Style="{ThemeResource infoText}" />
+                        <TextBlock x:Name="ac1" Grid.Row="1" Grid.Column="0"  TextWrapping="WrapWholeWords" Text="Doble pulsación en la pantalla para" Style="{ThemeResource labelText}" x:Uid="ac1"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1"  TextWrapping="WrapWholeWords" Text="{x:Bind ViewModel.Action1}" Margin="4,0,0,0" Style="{ThemeResource infoText}" />
+                        <TextBlock x:Name="ac2" Grid.Row="2" Grid.Column="0"  TextWrapping="WrapWholeWords" Text="pulsación larga en la pantalla para" Style="{ThemeResource labelText}" x:Uid="ac2"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" TextWrapping="WrapWholeWords"  Text="{x:Bind ViewModel.Action2}" Margin="4,0,0,0" Style="{ThemeResource infoText}" />
+                        <TextBlock x:Name="ac3" Grid.Row="3" Grid.Column="0"  TextWrapping="WrapWholeWords" Text="Desliza el dedo hacia abajo para" Style="{ThemeResource labelText}" x:Uid="ac3"/>
+                        <TextBlock Grid.Row="3" Grid.Column="1"  TextWrapping="WrapWholeWords" Text="{x:Bind ViewModel.Action3}" Margin="4,0,0,0" Style="{ThemeResource infoText}" />
+                        <TextBlock x:Name="ac4" Grid.Row="4" Grid.Column="0"  TextWrapping="WrapWholeWords" Text="Desliza el dedo hacia arriba para" Style="{ThemeResource labelText}" x:Uid="ac4"/>
+                        <TextBlock Grid.Row="4" Grid.Column="1"  TextWrapping="WrapWholeWords" Text="{x:Bind ViewModel.Action4}" Margin="4,0,0,0" Style="{ThemeResource infoText}" />
+                        <TextBlock x:Name="ac5" Grid.Row="5" Grid.Column="0"  TextWrapping="WrapWholeWords" Text="Desliza el dedo hacia a la derecha para" Style="{ThemeResource labelText}" x:Uid="ac5"/>
+                        <TextBlock Grid.Row="5" Grid.Column="1"  TextWrapping="WrapWholeWords" Text="{x:Bind ViewModel.Action5}" Margin="4,0,0,0" Style="{ThemeResource infoText}" />
+                        <TextBlock x:Name="ac6" Grid.Row="6" Grid.Column="0"  TextWrapping="WrapWholeWords" Text="Desliza el dedo hacia a la izquierda para" Style="{ThemeResource labelText}" x:Uid="ac6"/>
+                        <TextBlock Grid.Row="6" Grid.Column="1"  TextWrapping="WrapWholeWords" Text="{x:Bind ViewModel.Action6}" Margin="4,0,0,0" Style="{ThemeResource infoText}" />
+                    </Grid>
+                    <Image x:Name="ac7i" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="ac6_" Width="30" Source="ms-appx:///Images/appbar.map.png"/>
+                    <TextBlock x:Name="ac7" RelativePanel.RightOf="ac7i" RelativePanel.AlignVerticalCenterWith="ac7i"  TextWrapping="WrapWholeWords" Style="{ThemeResource infoText}"  Text="Para ver el mapa" x:Uid="ac7"/>
+
+                    <Image x:Name="ac8i" RelativePanel.Below="ac7" Width="30" Source="ms-appx:///Images/appbar.moon.waning.crescent.png"/>
+                    <Image x:Name="ac8ii" RelativePanel.AlignVerticalCenterWith="ac8i"  RelativePanel.RightOf="ac8i" Width="30" Source="ms-appx:///Images/appbar.weather.sun.png"/>
+                    <TextBlock x:Name="ac8" RelativePanel.AlignVerticalCenterWith="ac8i" RelativePanel.RightOf="ac8ii"  TextWrapping="WrapWholeWords" Style="{ThemeResource infoText}" Text="Para cambiar de modo día a noche" x:Uid="ac8"/>
+
+                    <TextBlock x:Name="p1" RelativePanel.Below="ac8"  TextWrapping="WrapWholeWords" Text="En la vista con mapa" x:Uid="ac9" FontSize="24"/>
+
+                    <TextBlock x:Name="ac9" RelativePanel.Below="p1" TextWrapping="WrapWholeWords" Text="pulsación larga en la pantalla para conocer la distancia entre la positició actual y el punto dado" Style="{ThemeResource infoText}" x:Uid="ac10"/>
+                    <TextBlock x:Name="ac10" RelativePanel.Below="ac9"  TextWrapping="WrapWholeWords" Text="Doble pulsación para guardar la posició actual" Style="{ThemeResource infoText}" x:Uid="ac11"/>
+
+                    <Image x:Name="ac11i" RelativePanel.Below="ac10" Width="30" Source="ms-appx:///Images/map.centerme.png"/>
+                    <TextBlock x:Name="ac11" RelativePanel.AlignVerticalCenterWith="ac11i" RelativePanel.RightOf="ac11i"  TextWrapping="WrapWholeWords" Style="{ThemeResource infoText}" Text="Para centrar el mapa a la posición actual" x:Uid="ac12"/>
+
+                    <Image x:Name="ac12i" RelativePanel.Below="ac11" Width="30" Source="ms-appx:///Images/photo.redeyes.png"/>
+                    <TextBlock x:Name="ac12" RelativePanel.AlignVerticalCenterWith="ac12i" RelativePanel.RightOf="ac12i"  TextWrapping="WrapWholeWords" Style="{ThemeResource infoText}" Text="Para cambiar la vista del mapa" x:Uid="ac13"/>
+
+                    <Image x:Name="ac13i" RelativePanel.Below="ac12" Width="30" Source="ms-appx:///Images/map.direction.png"/>
+                    <TextBlock x:Name="ac13" RelativePanel.AlignVerticalCenterWith="ac13i" RelativePanel.RightOf="ac13i"  TextWrapping="WrapWholeWords" Style="{ThemeResource infoText}" Text="Para activar/desactivar el compás" x:Uid="ac14"/>
+
+                    <Image x:Name="ac14i" RelativePanel.Below="ac13" Width="30" Source="ms-appx:///Images/appbar.sync.rest.png"/>
+                    <TextBlock x:Name="ac14" RelativePanel.AlignVerticalCenterWith="ac14i" RelativePanel.RightOf="ac14i"  TextWrapping="WrapWholeWords" Style="{ThemeResource infoText}"  Text="Para activar/desactivar la rotación de la pantalla" x:Uid="ac15"/>
+
+                    <TextBlock x:Name="ac15" RelativePanel.Below="ac14"  TextWrapping="WrapWholeWords" Text="Puedes desactivar éste mensaje y otros, activando el modo experto en la pantalla de configuración" x:Uid="ac16"/>
+                    <TextBlock x:Name="ac16" RelativePanel.Below="ac15"  TextWrapping="WrapWholeWords" Style="{ThemeResource infoTextL}" Text="Toque la pantalla para continuar" x:Uid="ac17"/>
+                </RelativePanel>
+            </ScrollViewer>
+        </Popup>
+    </Grid>
+</Page>

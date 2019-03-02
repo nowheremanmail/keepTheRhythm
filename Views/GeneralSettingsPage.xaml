@@ -1,0 +1,164 @@
+﻿<Page
+    x:Class="UniversalKeepTheRhythm.Views.GeneralSettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalKeepTheRhythm.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+      xmlns:vm="using:UniversalKeepTheRhythm.ViewModels" 
+      xmlns:ut="using:UniversalKeepTheRhythm.Converters"
+      xmlns:dm="using:UniversalKeepTheRhythm.model" 
+      xmlns:t10converters="using:Template10.Converters"      
+     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      RequestedTheme="Dark"
+>
+
+    <Page.DataContext>
+        <vm:GeneralSettingsViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Pivot>
+        <PivotItem Header="About">
+            <RelativePanel >
+
+                <Border x:Name="LogoImage" Opacity="0.2" 
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            BorderBrush="DimGray"
+                            BorderThickness="1"
+                            IsHitTestVisible="False"
+                            RelativePanel.AlignRightWithPanel="True"
+                            RelativePanel.AlignTopWithPanel="True">
+                    <Border.Background>
+                        <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                    </Border.Background>
+                    <Image Margin="12" 
+                               Source="{Binding Logo}"
+                               Stretch="None" />
+                </Border>
+
+                <TextBlock x:Name="DisplayNameTextBlock"
+                               Margin="0,0,0,12"
+                               FontSize="24"
+                               RelativePanel.AlignLeftWithPanel="True"
+                               RelativePanel.AlignRightWithPanel="True"
+                               RelativePanel.AlignTopWithPanel="True"
+                               Text="{x:Bind ViewModel.DisplayName}" />
+
+                <TextBlock x:Name="PublisherTextBlock"
+                               RelativePanel.AlignLeftWithPanel="True"
+                               RelativePanel.Below="DisplayNameTextBlock"
+                               Text="{x:Bind ViewModel.Publisher}" />
+
+                <TextBlock x:Name="VersionTextBlock"
+                               RelativePanel.AlignLeftWithPanel="True"
+                           
+                               RelativePanel.Below="PublisherTextBlock">
+                        <Run>Version</Run>
+                        <Run Text="{x:Bind ViewModel.Version}" />
+                </TextBlock>
+
+
+                <TextBlock x:Name="FeedbackTextBlock"
+                               RelativePanel.AlignLeftWithPanel="True"
+                               RelativePanel.Below="VersionTextBlock">
+                        <Run>Please we need your feed back</Run>
+<Run>Thank you!</Run>
+                </TextBlock>
+
+                <Button Grid.Row="6" x:Name="feedbackButton" Margin="0,12" Padding="12,4" HorizontalAlignment="Center" 
+                            Command="{x:Bind ViewModel.FeedbackCommand}" VerticalAlignment="Center" Visibility="Visible" 
+                            RelativePanel.RightOf="FeedbackTextBlock" RelativePanel.AlignVerticalCenterWith="FeedbackTextBlock">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE939;" Padding="0,4,16,4" VerticalAlignment="Center"/>
+                        <TextBlock x:Uid="Feedback" Text="Feedback" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <!--Button Margin="0,12" Padding="12,4" HorizontalAlignment="Center" 
+                            Command="{x:Bind ViewModel.RestoreCommand}" VerticalAlignment="Center" Visibility="Visible" 
+                            RelativePanel.Below="feedbackButton" Content="Restore"/-->
+
+            </RelativePanel>
+        </PivotItem>
+        <PivotItem Header="Settings">
+            <StackPanel>
+                <ToggleSwitch Grid.Row="0" Name="conditions" x:Uid="ShowConditions"  
+                              Header="ShowConditions" IsOn="{x:Bind ViewModel.AcceptConditions, Mode=TwoWay}" />
+                <!--<ComboBox Grid.Row="1"  Header="VoiceAdviceLanguage" x:Uid="VoiceAdviceLanguage" x:Name="voices" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding DisplayName}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>-->
+
+                <ComboBox Grid.Row="2" x:Uid="CartoMode" Name="cartoMode" Header="CartoMode" ItemsSource="{x:Bind ViewModel.CartoModes}" SelectedItem="{x:Bind ViewModel.CurrentCartoMode, Mode=TwoWay}"  >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <ComboBox Grid.Row="3" x:Uid="Units" Name="units" Header="Units" ItemsSource="{x:Bind ViewModel.Units}" SelectedItem="{x:Bind ViewModel.CurrentUnit, Mode=TwoWay}" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                
+                        <!--<ToggleSwitch Grid.Row="0"  Name="liveTile" Header="LiveTile" />
+                        <TextBlock Grid.Row="1"  x:Name="liveTileUpdateTxt" Text="liveTileUpdate"/>
+                        <Slider Grid.Row="2"  Name="liveTileUpdate" Value="30" Minimum="15" Maximum="120" SmallChange="1"/>-->
+
+                <ToggleSwitch Grid.Row="3"  IsOn="{x:Bind ViewModel.StoreAll, Mode=TwoWay}"  Name="StoreAll" Header="StoreAllPoints" x:Uid="StoreAllPoints"/>
+
+
+                        <ToggleSwitch Grid.Row="4" Name="expertMode" Header="ExpertMode" IsOn="{x:Bind ViewModel.expertMode, Mode=TwoWay}" x:Uid="ExpertMode" />
+
+                <ToggleSwitch Grid.Row="0"  IsOn="{x:Bind ViewModel.ShowGraphSummary, Mode=TwoWay}" Name="showGraphSummary" Header="ShowGraphSummary" x:Uid="ShowGraphSummary"/>
+
+                <ComboBox Grid.Row="1"  Name="graphType" Header="GraphType" x:Uid="GraphType" ItemsSource="{x:Bind ViewModel.GraphTypes}" SelectedItem="{x:Bind ViewModel.CurrentGraphType, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <ComboBox Grid.Row="2"  Name="graphInfo" Header="GraphInfo" x:Uid="GraphInfo" ItemsSource="{x:Bind ViewModel.GraphInfos}" SelectedItem="{x:Bind ViewModel.CurrentGraphInfo, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                        <!--<ComboBox Grid.Row="4"  Name="radioFMMode" Header="RadioFMMode" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>-->
+
+
+            </StackPanel>
+        </PivotItem>
+    </Pivot>
+</Page>

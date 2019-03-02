@@ -1,0 +1,351 @@
+﻿<Page
+    x:Class="UniversalKeepTheRhythm.Views.SessionDetailPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:controls="using:Template10.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:UniversalKeepTheRhythm.Views"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+      xmlns:vm="using:UniversalKeepTheRhythm.ViewModels" 
+      xmlns:ut="using:UniversalKeepTheRhythm.Converters"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      RequestedTheme="Dark"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:SessionDetailViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Page.BottomAppBar>
+        <CommandBar x:Name="menu">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Uid="startNewWorkout" Label="startNewWorkout" Command="{x:Bind ViewModel.NewWorkoutCommand}" >
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Images/appbar.new.rest.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="share" Label="share" Command="{x:Bind ViewModel.ShareCommand}" >
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Images/appbar.share.rest.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="continueWorkout" Label="continueWorkout" Command="{x:Bind ViewModel.ContinueWorkoutCommand}" >
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Images/appbar.next.rest.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <!--<AppBarButton x:Uid="ShowInfo" Label="ShowInfo" Command="{x:Bind ViewModel.ShowInfoCommand}" >
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Images/seeInfo.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>-->
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="DeleteSessionL" Icon="Delete" Label="DeleteSession" Command="{x:Bind ViewModel.DeleteCommand}"/>
+                <AppBarButton x:Uid="CompressData" Icon="Filter" Label="CompressData" Command="{x:Bind ViewModel.CompressCommand}"/>
+                <AppBarButton x:Uid="FixData" Icon="Manage" Label="FixData" Command="{x:Bind ViewModel.FixCommand}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Page.Resources>
+        <ResourceDictionary>
+
+            <DataTemplate x:Key="TextCanvasTemplate" x:DataType="vm:TextCanvas">
+                <TextBlock Text="{x:Bind Text}" Style="{x:Bind StyleText}" RenderTransformOrigin="{x:Bind Center}" Canvas.ZIndex="1000" >
+                    <TextBlock.RenderTransform>
+                        <RotateTransform Angle="{Binding Rotation, Mode=OneWay}"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </DataTemplate>
+
+            <DataTemplate x:Key="LineCanvasTemplate" x:DataType="vm:LineCanvas">
+                <Line X1="0" Y1="0" X2="{x:Bind X2}" Y2="{x:Bind Y2}" Style="{x:Bind StyleText}"  Canvas.ZIndex="500" />
+            </DataTemplate>
+
+            <DataTemplate x:Key="PolylineCanvasTemplate" x:DataType="vm:PolylineCanvas">
+                <Polyline Style="{x:Bind StyleText}" Points="{x:Bind Points}" Stroke="{x:Bind Brush}"></Polyline>
+            </DataTemplate>
+
+            <DataTemplate x:Key="PolygonCanvasTemplate" x:DataType="vm:PolygonCanvas">
+                <Polygon Style="{x:Bind StyleText}" Points="{x:Bind Points}"></Polygon>
+            </DataTemplate>
+
+            <DataTemplate x:Key="RectangleCanvasTemplate" x:DataType="vm:RectangleCanvas">
+                <Rectangle Style="{x:Bind StyleText}" Width="{x:Bind Width}" Height="{x:Bind Height}"></Rectangle>
+            </DataTemplate>
+
+            <DataTemplate x:Key="EllipseCanvasTemplate" x:DataType="vm:EllipseCanvas">
+                <Ellipse Style="{x:Bind StyleText}" Width="{x:Bind Width}" Height="{x:Bind Height}"  Canvas.ZIndex="2000"  Visibility="Collapsed"></Ellipse>
+            </DataTemplate>
+
+            <DataTemplate x:Key="ShowInfoTemplate" x:DataType="vm:ShowInfoCanvas">
+                <StackPanel Background="{ThemeResource PhoneAccentBrush}" Visibility="Collapsed">
+                    <TextBlock Text="{x:Bind speedPoint, Mode=OneWay, Converter={StaticResource speedConverter}}" Name="speedPoint" Style="{StaticResource graphTextSpeed}" Canvas.ZIndex="110"/>
+                    <TextBlock Text="{x:Bind pacePoint, Mode=OneWay, Converter={StaticResource paceConverter}}" Name="pacePoint" Style="{StaticResource graphTextPace}" Canvas.ZIndex="110" />
+                    <TextBlock Text="{x:Bind altitudePoint, Mode=OneWay, Converter={StaticResource altitudeConverter}}" Name="altitudePoint" Style="{StaticResource graphTextAltitude}"   Canvas.ZIndex="110" />
+                    <TextBlock Text="{x:Bind point, Mode=OneWay, Converter={StaticResource distanceConverter}}" Name="point"  Style="{StaticResource graphTextPoint}"  Canvas.ZIndex="110"/>
+                    <TextBlock Text="{x:Bind time, Mode=OneWay, Converter={StaticResource timeConverter}}" Name="time"  Style="{StaticResource graphTextTime}"  Canvas.ZIndex="110"/>
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate x:Key="TextMapTemplate" x:DataType="vm:TextMap">
+                <Grid Style="{x:Bind PanelStyleText}" maps:MapControl.Location="{x:Bind Location}" maps:MapControl.NormalizedAnchorPoint="0,1">
+                    <TextBlock Text="{x:Bind Title}" Style="{x:Bind StyleText}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="LoopTextMapTemplate" x:DataType="vm:LoopTextMap">
+                <Grid Style="{x:Bind PanelStyleText}" maps:MapControl.Location="{x:Bind Location}" 
+                            maps:MapControl.NormalizedAnchorPoint="0.5,0.5" Tapped="{x:Bind Tapped}" Tag="{x:Bind Tag}">
+                    <TextBlock Text="{x:Bind Title}" Style="{x:Bind StyleText}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Ellipse Width="4" Height="4" Fill="Black" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="PointMapTemplate" x:DataType="vm:ShowInfoCanvas">
+                <Grid maps:MapControl.Location="{x:Bind Location}" 
+                            maps:MapControl.NormalizedAnchorPoint="0,1" Opacity="0.5" Background="White" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{x:Bind point, Mode=OneWay, Converter={StaticResource distanceConverter}}" Foreground="Black" Name="point"  />
+                    <TextBlock Grid.Row="1" Text="{x:Bind time, Mode=OneWay, Converter={StaticResource timeConverter}}" Foreground="Black" Name="time"  />
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="SpeedPointMapTemplate" x:DataType="vm:SpeedPointMap">
+                <Grid maps:MapControl.Location="{x:Bind Location}" 
+                            maps:MapControl.NormalizedAnchorPoint="0,1" Opacity="0.5" Background="White" Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{x:Bind Distance, Mode=OneWay, Converter={StaticResource distanceConverter}}" Foreground="Black" Name="point"  />
+                    <TextBlock Grid.Row="1" Text="{x:Bind Speed, Mode=OneWay, Converter={StaticResource speedConverter}}" Foreground="Black" Name="time"  />
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="PacePointMapTemplate" x:DataType="vm:PacePointMap">
+                <Grid maps:MapControl.Location="{x:Bind Location}" 
+                            maps:MapControl.NormalizedAnchorPoint="0,1" Opacity="0.5" Background="White" Margin="4">
+                    <TextBlock Text="{x:Bind Distance, Mode=OneWay, Converter={StaticResource distanceConverter}}" Foreground="Black" Name="point"  />
+                    <TextBlock Text="{x:Bind Pace, Mode=OneWay, Converter={StaticResource paceConverter}}" Foreground="Black" Name="time"  />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="PolylineMapTemplate" x:DataType="vm:PolylineMap">
+                <StackPanel></StackPanel>
+                <!--<maps:MapPolyline Path="{x:Bind MapRoute, Mode=OneWay}" StrokeColor="{x:Bind StrokeColor}" StrokeThickness="{x:Bind StrokeThickness}"/>-->
+            </DataTemplate>
+            <ut:MapsSelector x:Key="mapSelector"
+                TextMapTemplate="{StaticResource TextMapTemplate}"
+                PointMapTemplate="{StaticResource PointMapTemplate}"
+                LoopTextMapTemplate="{StaticResource LoopTextMapTemplate}"
+                SpeedPointMapTemplate="{StaticResource SpeedPointMapTemplate}"
+                PacePointMapTemplate="{StaticResource PacePointMapTemplate}"
+                             PolylineMapTemplate="{StaticResource PolylineMapTemplate}"
+            />
+
+
+            <ut:CanvasSelector x:Key="canvasSelector" 
+                               TextCanvasTemplate="{StaticResource TextCanvasTemplate}"
+                               LineCanvasTemplate="{StaticResource LineCanvasTemplate}"
+                               PolylineCanvasTemplate="{StaticResource PolylineCanvasTemplate}"
+                               PolygonCanvasTemplate="{StaticResource PolygonCanvasTemplate}"
+                               RectangleCanvasTemplate="{StaticResource RectangleCanvasTemplate}"
+                               EllipseCanvasTemplate="{StaticResource EllipseCanvasTemplate}"
+                               ShowInfoTemplate="{StaticResource ShowInfoTemplate}"
+                               />
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Margin="12,0,12,0">
+        <ProgressBar x:Name="progressBarInitial" IsIndeterminate="true" Visibility="{x:Bind ViewModel.progressBarInitialVisibility}" VerticalAlignment="Center"/>
+
+        <Pivot>
+              <PivotItem Header="detail" x:Uid="DetailInfo" Visibility="{x:Bind ViewModel.ctlDetailVisibility, Mode=OneWay}">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="DateSession" x:Uid="DateSession" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="0" />
+                    <TextBlock Name="dateSession" Text="{x:Bind ViewModel.dateSession, Mode=OneWay}" Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="0" />
+
+                    <TextBlock Text="Duration" x:Uid="Duration" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="1" />
+                    <TextBlock Name="Duration" Text="{x:Bind ViewModel.Duration, Mode=OneWay, Converter={StaticResource timeConverter}}" Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="1"  />
+
+                    <TextBlock Text="Distance" x:Uid="Distance" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="2" />
+                    <TextBlock Name="Distance" Text="{x:Bind ViewModel.Distance, Mode=OneWay, Converter={StaticResource distanceConverter}}" Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="2" />
+
+                    <TextBlock Text="Pace" x:Uid="Pace" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="3" />
+                    <TextBlock Name="Pace" Text="{x:Bind ViewModel.Pace, Mode=OneWay, Converter={StaticResource paceConverter}}"  Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="3" />
+
+                    <TextBlock Text="PlanedPace" x:Uid="PlanedPace" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="4" />
+                    <TextBlock Name="PlanedPace" Text="{x:Bind ViewModel.PlanedPace, Mode=OneWay, Converter={StaticResource paceConverter}}"  Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="4" />
+
+                    <TextBlock Text="Speed" x:Uid="Speed" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="5" />
+                    <StackPanel Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" Orientation="Horizontal">
+                        <TextBlock Name="SpeedMin" Text="{x:Bind ViewModel.SpeedMin, Mode=OneWay, Converter={StaticResource speedConverter}}" Style="{StaticResource infoText2}"/>
+                        <TextBlock Text=" .. " Style="{StaticResource infoText2}"/>
+                        <TextBlock Name="SpeedMax" Text="{x:Bind ViewModel.SpeedMax, Mode=OneWay, Converter={StaticResource speedConverter}}" Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="7" />
+                    </StackPanel>
+
+                    <TextBlock Text="AvgSpeed" x:Uid="AvgSpeed" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="6" />
+                    <TextBlock Name="SpeedAvg" Text="{x:Bind ViewModel.SpeedAvg, Mode=OneWay, Converter={StaticResource speedConverter}}" Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="6" />
+
+                    <TextBlock Text="Altitude" x:Uid="Altitude" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="7" />
+                    <StackPanel  Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Orientation="Horizontal">
+                        <TextBlock Name="AltitudeMin" Text="{x:Bind ViewModel.AltitudeMin, Mode=OneWay, Converter={StaticResource distanceConverter}}" Style="{StaticResource infoText2}"/>
+                        <TextBlock Text=" .. " Style="{StaticResource infoText2}"/>
+                        <TextBlock Name="AltitudeMax" Text="{x:Bind ViewModel.AltitudeMax, Mode=OneWay, Converter={StaticResource distanceConverter}}" Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="9" />
+                    </StackPanel>
+                    <TextBlock Text="AvgAltitude" x:Uid="AvgAltitude" Style="{StaticResource labelText2}" Grid.Column="0" Grid.Row="8" />
+                    <TextBlock Name="AltitudeAvg" Text="{x:Bind ViewModel.AltitudeAvg, Mode=OneWay, Converter={StaticResource distanceConverter}}" Style="{StaticResource infoText2}" Grid.Column="1" Grid.Row="8" />
+
+                    <StackPanel Grid.Column="0" Grid.Row="11" Orientation="Horizontal" Grid.ColumnSpan="3">
+                        <Image Source="/Images/appbar.upload.png"  HorizontalAlignment="Right"/>
+                        <TextBlock Name="ascendent" Text="{x:Bind ViewModel.Ascendent, Mode=OneWay, Converter={StaticResource distanceConverter}}"  Grid.Column="1" Grid.Row="11" Style="{StaticResource infoText2}"/>
+
+                        <Image Source="/Images/appbar.download.png"  Grid.Column="2" Grid.Row="11" HorizontalAlignment="Right" />
+                        <TextBlock Name="descendent" Text="{x:Bind ViewModel.Descendent, Mode=OneWay, Converter={StaticResource distanceConverter}}"  Grid.Column="3" Grid.Row="11" Style="{StaticResource infoText2}" />
+                    </StackPanel>
+                    
+                    <TextBox x:Uid="Comment" Text="{x:Bind ViewModel.Comment, Mode=TwoWay}" Header="Comment" Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="3"/>
+                    <TextBox Grid.Row="13" Text="{x:Bind ViewModel.NamePath, Mode=TwoWay}" x:Uid="NamePath" Header="NamePath" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+                    <ComboBox Grid.Row="14" x:Uid="SessionType" Header="SessionType" Grid.Column="0" Grid.ColumnSpan="2" Name="modeSelector" ItemsSource="{x:Bind ViewModel.modeSelectorList, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.modeSelector, Mode=TwoWay}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding description}"  />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Grid.Row="15" Grid.Column="0" Name="summaryData" Text=" " Grid.ColumnSpan="2"/>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Header="ctlPerfile" x:Uid="PerfileInfo" Visibility="{x:Bind ViewModel.ctlPerfileVisibility, Mode=OneWay}" 
+                       >
+                <ItemsControl ItemsSource="{x:Bind ViewModel.altitudeCanvasText, Mode=OneWay}" ItemTemplateSelector="{StaticResource canvasSelector}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas Name="altitudeCanvas" Background="Transparent" Margin="4,32" 
+                                         SizeChanged="Canvas_SizeChanged"  >
+                                </Canvas>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemContainerStyle>
+                            <Style   TargetType="ContentPresenter">
+                                <Setter Property="Canvas.Top" Value="{Binding Top}" />
+                                <Setter Property="Canvas.Left" Value="{Binding Left}" />
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                    </ItemsControl>
+                
+            </PivotItem>
+
+            <PivotItem Header="ctlMap" x:Uid="MapInfo" Visibility="{x:Bind ViewModel.ctlMapVisibility, Mode=OneWay}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Center="{x:Bind ViewModel.MapCenter, Mode=TwoWay}"-->
+
+                    <maps:MapControl 
+            Name="map1" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="2" 
+                        MapServiceToken="{x:Bind ViewModel.MapServiceToken, Mode=OneTime}"
+                        Style="{x:Bind ViewModel.CurrentMapStyle, Mode=OneWay}"
+            Background="White" Scene="{x:Bind ViewModel.Scene, Mode=TwoWay}"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"           
+            ZoomLevel="11">
+                        <maps:MapItemsControl ItemsSource="{x:Bind ViewModel.LandmarkLayer, Mode=OneWay}" >
+                            <maps:MapItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <ContentControl Content="{Binding}" ContentTemplateSelector="{StaticResource mapSelector}" />
+                                </DataTemplate>
+                            </maps:MapItemsControl.ItemTemplate>
+                        </maps:MapItemsControl>
+
+                        <!--<maps:MapPolyline Path="{x:Bind ViewModel.MapRoute, Mode=OneWay}" StrokeColor="Red" StrokeThickness="5"/>-->
+
+                    </maps:MapControl>
+
+                    <Button Grid.Column="0" Grid.Row="1" Command="{x:Bind ViewModel.CenterAction}">
+                        <Image Width="30" Source="ms-appx:///Images/Lmap.centerme.png" />
+                    </Button>
+                    <!--<Button x:Name="zoomImage"  Grid.Column="2" Grid.Row="1" Command="{x:Bind ViewModel.ExpandAction}">
+                        <Image Source="/Images/Lfullscreen.expand.png"  />
+                    </Button>-->
+                    <Button Grid.Column="5" Grid.Row="1" Command="{x:Bind ViewModel.MapTypeAction}">
+                        <Image Width="30" Source="ms-appx:///Images/Lphoto.redeyes.png" />
+                    </Button>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Header="lapsDetail" x:Uid="LapsInfo" Visibility="{x:Bind ViewModel.ctlLapsVisibility, Mode=OneWay}">
+                <ListBox x:Name="listLaps" ItemsSource="{x:Bind ViewModel.LapsDetail, Mode=OneWay}" 
+                            SelectedItem="{x:Bind ViewModel.LapDetailSelected, Mode=TwoWay}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="vm:LapDetail">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Column="1" Grid.Row="0" Text="{x:Bind Distance, Converter={StaticResource distanceConverter}}" TextWrapping="Wrap" />
+
+                                <TextBlock Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" Margin="8,0,0,0" Text="{x:Bind Time, Converter={StaticResource timeConverter}}"/>
+                                <TextBlock Grid.Column="2" Grid.Row="1" TextWrapping="Wrap"  Text="{x:Bind Pace, Converter={StaticResource paceConverter}}"/>
+
+                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Width="44" Height="44" Source="{x:Bind Tendency, Converter={StaticResource tendencyConverter}}"/>
+
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </PivotItem>
+        </Pivot>     </Grid>
+
+</Page>

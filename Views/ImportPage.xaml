@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="UniversalKeepTheRhythm.Views.ImportPage"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:controls="using:Template10.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:UniversalKeepTheRhythm.Views"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="using:UniversalKeepTheRhythm.ViewModels" 
+        xmlns:dm="using:UniversalKeepTheRhythm.model" 
+      xmlns:ut="using:UniversalKeepTheRhythm.Converters"
+    xmlns:ot="using:UniversalKeepTheRhythm.Others"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      RequestedTheme="Dark"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:ImportViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Grid Margin="12,0,12,0" >
+        <StackPanel x:Name="ContentPanel" Grid.Row="1" >
+            <ComboBox ItemsSource="{x:Bind ViewModel.ListI, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedItemI, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate x:DataType="dm:Paths">
+                        <TextBlock Text="{x:Bind Description}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Header="NamePath" x:Uid="NamePath" Text="{x:Bind ViewModel.NamePath, Mode=TwoWay}" />
+
+            <TextBox x:Uid="Comment" Name="comment" Text="{x:Bind ViewModel.Comment, Mode=TwoWay}" Header="Comment"/>
+
+            <TextBlock Visibility="Collapsed" Name="t0" HorizontalAlignment="Center" TextWrapping="NoWrap" Text="Importing"  />
+
+            <WebView Height="150" x:Name="extraInfo" Visibility="{x:Bind ViewModel.ExtraInfo, Mode=OneWay, Converter={StaticResource EmptyToVisibility}}" ot:MyExtension.HTML="{x:Bind ViewModel.ExtraInfo, Mode=OneWay}" />
+            <TextBlock Visibility="{x:Bind ViewModel.ExtraInfo, Mode=OneWay, Converter={StaticResource EmptyToVisibility}}" Text="{x:Bind ViewModel.Duration, Mode=OneWay, Converter={StaticResource timeConverter}}"/>
+            <TextBlock Visibility="{x:Bind ViewModel.ExtraInfo, Mode=OneWay, Converter={StaticResource EmptyToVisibility}}" Text="{x:Bind ViewModel.Distance, Mode=OneWay, Converter={StaticResource distanceConverter}}" />
+
+            <RelativePanel >
+                <Button x:Uid="ReallyImportButton" Name="bbu" VerticalAlignment="Center"
+                Visibility="{x:Bind ViewModel.ExtraInfo, Mode=OneWay, Converter={StaticResource EmptyToVisibility}}" 
+                Content="ReallyImport" 
+                Command="{x:Bind ViewModel.ReallyImportCommand}" IsEnabled="{x:Bind ViewModel.progressBar, Mode=OneWay, Converter={StaticResource BoolNegationConverter}}"/>
+
+                <ProgressBar Margin="24" VerticalAlignment="Center" RelativePanel.RightOf="bbu" RelativePanel.AlignRightWithPanel="True" 
+                             Visibility="{x:Bind ViewModel.progressBar, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}" 
+                             Name="progressBar" 
+                             IsIndeterminate="{x:Bind ViewModel.ExtraInfo, Mode=OneWay, Converter={StaticResource EmptyToBoolean}}"  
+                     Maximum="{x:Bind ViewModel.ProgressValueMax, Mode=OneWay}" Value="{x:Bind ViewModel.ProgressValue, Mode=OneWay}"
+                     />
+            </RelativePanel>
+        </StackPanel>
+    </Grid>
+</Page>

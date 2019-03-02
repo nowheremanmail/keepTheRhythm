@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{0CC10404-8EE5-43B6-A86F-6894CD491D43}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UniversalKeepTheRhythm</RootNamespace>
+    <AssemblyName>UniversalKeepTheRhythm</AssemblyName>
+    <DefaultLanguage>en</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>Blank_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\AltitudeConverter.cs" />
+    <Compile Include="Converters\CanvasSelector.cs" />
+    <Compile Include="Converters\DistanceConverter.cs" />
+    <Compile Include="Converters\MapsSelector.cs" />
+    <Compile Include="Converters\PaceConverter.cs" />
+    <Compile Include="Converters\ProgressStyleConverter.cs" />
+    <Compile Include="Converters\SpeedConverter.cs" />
+    <Compile Include="Converters\TendencyConverter.cs" />
+    <Compile Include="Converters\TimeConverter.cs" />
+    <Compile Include="Converters\TypeStyleConverter.cs" />
+    <Compile Include="DataModel\Mesures.cs" />
+    <Compile Include="DataModel\Paths.cs" />
+    <Compile Include="DataModel\PointInterest.cs" />
+    <Compile Include="DataModel\Points.cs" />
+    <Compile Include="DataModel\Properties.cs" />
+    <Compile Include="DataModel\Sessions.cs" />
+    <Compile Include="DataModel\Settings.cs" />
+    <Compile Include="Others\MyExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DataBaseManager.cs" />
+    <Compile Include="Services\DistanceCalculator.cs" />
+    <Compile Include="Services\Engine.cs" />
+    <Compile Include="Services\ExtensionMethods.cs" />
+    <Compile Include="Services\Info.cs" />
+    <Compile Include="Services\InfoSplit.cs" />
+    <Compile Include="Services\InmediatePoint.cs" />
+    <Compile Include="Services\LiveApi.cs" />
+    <Compile Include="Services\ManipulationInputProcessor.cs" />
+    <Compile Include="ViewModels\EllipseMap.cs" />
+    <Compile Include="ViewModels\EnrichedMesure.cs" />
+    <Compile Include="ViewModels\LapDetail.cs" />
+    <Compile Include="Services\ListOfInmediatePoints.cs" />
+    <Compile Include="Services\ListOfMovements.cs" />
+    <Compile Include="Services\ListOfValues.cs" />
+    <Compile Include="Services\MusicService.cs" />
+    <Compile Include="Services\Properties.cs" />
+    <Compile Include="Services\TriggerAction.cs" />
+    <Compile Include="Services\TriggerActionDistance.cs" />
+    <Compile Include="Services\TriggerActionNumber.cs" />
+    <Compile Include="Services\TriggerActionTime.cs" />
+    <Compile Include="Services\VoiceService.cs" />
+    <Compile Include="Services\_TriggerAction.cs" />
+    <Compile Include="Others\CircularBuffer.cs" />
+    <Compile Include="Others\Constants.cs" />
+    <Compile Include="Others\Delayer.cs" />
+    <Compile Include="Others\Export.cs" />
+    <Compile Include="Others\LittleWatson.cs" />
+    <Compile Include="Others\PairCodeDesc.cs" />
+    <Compile Include="Others\RelayCommand.cs" />
+    <Compile Include="Others\ScreenStatus.cs" />
+    <Compile Include="Others\SortedCollection.cs" />
+    <Compile Include="Others\SortedObservableCollection.cs" />
+    <Compile Include="Others\Utils.cs" />
+    <Compile Include="ViewModels\GeneralSettingsViewModel.cs" />
+    <Compile Include="Others\GeoCoordinateHelper.cs" />
+    <Compile Include="ViewModels\ImportViewModel.cs" />
+    <Compile Include="ViewModels\LineCanvas.cs" />
+    <Compile Include="ViewModels\ListPointsCanvas.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\MapObject.cs" />
+    <Compile Include="ViewModels\NewSessionViewModel.cs" />
+    <Compile Include="ViewModels\ObjectCanvas.cs" />
+    <Compile Include="ViewModels\PacePointMap.cs" />
+    <Compile Include="ViewModels\PathListViewModel.cs" />
+    <Compile Include="ViewModels\PointMap.cs" />
+    <Compile Include="ViewModels\PolygonCanvas.cs" />
+    <Compile Include="ViewModels\PolylineCanvas.cs" />
+    <Compile Include="ViewModels\PolylineMap.cs" />
+    <Compile Include="ViewModels\ProgressViewModel.cs" />
+    <Compile Include="ViewModels\RectangleCanvas.cs" />
+    <Compile Include="ViewModels\SessionDetailViewModel.cs" />
+    <Compile Include="ViewModels\EllipseCanvas.cs" />
+    <Compile Include="ViewModels\SessionListViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\ShareViewModel.cs" />
+    <Compile Include="ViewModels\ShowInfoCanvas.cs" />
+    <Compile Include="ViewModels\SizeCanvas.cs" />
+    <Compile Include="ViewModels\SpeedPointMap.cs" />
+    <Compile Include="ViewModels\TextCanvas.cs" />
+    <Compile Include="ViewModels\LoopTextMap.cs" />
+    <Compile Include="ViewModels\TextMap.cs" />
+    <Compile Include="ViewModels\TotalListViewModel.cs" />
+    <Compile Include="Views\GeneralSettingsPage.xaml.cs">
+      <DependentUpon>GeneralSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImportPage.xaml.cs">
+      <DependentUpon>ImportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewSessionPage.xaml.cs">
+      <DependentUpon>NewSessionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PathListPage.xaml.cs">
+      <DependentUpon>PathListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProgressPage.xaml.cs">
+      <DependentUpon>ProgressPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SessionDetailPage.xaml.cs">
+      <DependentUpon>SessionDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SessionListPage.xaml.cs">
+      <DependentUpon>SessionListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharePage.xaml.cs">
+      <DependentUpon>SharePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TextPage.xaml.cs">
+      <DependentUpon>TextPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TotalListPage.xaml.cs">
+      <DependentUpon>TotalListPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Blank_TemporaryKey.pfx" />
+    <PRIResource Include="Strings\es\Resources.resw" />
+    <PRIResource Include="Strings\qps-ploc\Resources.resw" />
+    <PRIResource Include="Strings\en\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Images\achievements.png" />
+    <Content Include="Images\activate.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\addtag.png" />
+    <Content Include="Images\alarm.png" />
+    <Content Include="Images\appbar.add.rest.png" />
+    <Content Include="Images\appbar.back.rest.png" />
+    <Content Include="Images\appbar.basecircle.rest.png" />
+    <Content Include="Images\appbar.bike.png" />
+    <Content Include="Images\appbar.cancel.rest.png" />
+    <Content Include="Images\appbar.check.rest.png" />
+    <Content Include="Images\appbar.close.rest.png" />
+    <Content Include="Images\appbar.delete.rest.png" />
+    <Content Include="Images\appbar.download.png" />
+    <Content Include="Images\appbar.download.rest.png" />
+    <Content Include="Images\appbar.edit.rest.png" />
+    <Content Include="Images\appbar.favs.addto.rest.png" />
+    <Content Include="Images\appbar.favs.rest.png" />
+    <Content Include="Images\appbar.feature.camera.rest.png" />
+    <Content Include="Images\appbar.feature.email.rest.png" />
+    <Content Include="Images\appbar.feature.search.rest.png" />
+    <Content Include="Images\appbar.feature.settings.rest.png" />
+    <Content Include="Images\appbar.feature.video.rest.png" />
+    <Content Include="Images\appbar.folder.rest.png" />
+    <Content Include="Images\appbar.man.suitcase.run.png" />
+    <Content Include="Images\appbar.man.walk.png" />
+    <Content Include="Images\appbar.map.png" />
+    <Content Include="Images\appbar.minus.rest.png" />
+    <Content Include="Images\appbar.moon.waning.crescent.png" />
+    <Content Include="Images\appbar.new.rest.png" />
+    <Content Include="Images\appbar.next.rest.png" />
+    <Content Include="Images\appbar.overflowdots.png" />
+    <Content Include="Images\appbar.questionmark.rest.png" />
+    <Content Include="Images\appbar.refresh.rest.png" />
+    <Content Include="Images\appbar.save.rest.png" />
+    <Content Include="Images\appbar.share.png" />
+    <Content Include="Images\appbar.share.rest.png" />
+    <Content Include="Images\appbar.stop.rest.png" />
+    <Content Include="Images\appbar.sync.rest.on.png" />
+    <Content Include="Images\appbar.sync.rest.png" />
+    <Content Include="Images\appbar.transport.ff.rest.png" />
+    <Content Include="Images\appbar.transport.pause.rest.png" />
+    <Content Include="Images\appbar.transport.play.rest.png" />
+    <Content Include="Images\appbar.transport.rew.rest.png" />
+    <Content Include="Images\appbar.upload.png" />
+    <Content Include="Images\appbar.upload.rest.png" />
+    <Content Include="Images\appbar.weather.sun.png" />
+    <Content Include="Images\ApplicationIcon.png" />
+    <Content Include="Images\attach.png" />
+    <Content Include="Images\audio.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\basecircle.png" />
+    <Content Include="Images\blank.png" />
+    <Content Include="Images\bluetooth.png" />
+    <Content Include="Images\bug.png" />
+    <Content Include="Images\calculator.png" />
+    <Content Include="Images\calendar.gototoday.png" />
+    <Content Include="Images\calendar.late.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\car.png" />
+    <Content Include="Images\chart.png" />
+    <Content Include="Images\check.png" />
+    <Content Include="Images\checkbox.deselectall.png" />
+    <Content Include="Images\checkbox.selectall.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\closet.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\dialpad.png" />
+    <Content Include="Images\down.png" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\edittext.png" />
+    <Content Include="Images\equal.png" />
+    <Content Include="Images\favs.addto.png" />
+    <Content Include="Images\favs.png" />
+    <Content Include="Images\favs.removefrom.png" />
+    <Content Include="Images\feature.alarm.png" />
+    <Content Include="Images\feature.calendar.png" />
+    <Content Include="Images\feature.camera.png" />
+    <Content Include="Images\feature.email.png" />
+    <Content Include="Images\feature.frontcamera.png" />
+    <Content Include="Images\feature.phone.png" />
+    <Content Include="Images\feature.search.png" />
+    <Content Include="Images\feature.settings.png" />
+    <Content Include="Images\feature.video.png" />
+    <Content Include="Images\folder.moveto.png" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\format.png" />
+    <Content Include="Images\forwardmessage.png" />
+    <Content Include="Images\fullscreen.expand.png" />
+    <Content Include="Images\fullscreen.shrink.png" />
+    <Content Include="Images\globe.png" />
+    <Content Include="Images\gotoslide.png" />
+    <Content Include="Images\goup.png" />
+    <Content Include="Images\heart.png" />
+    <Content Include="Images\heart2.broken.png" />
+    <Content Include="Images\heart2.empty.png" />
+    <Content Include="Images\heart2.png" />
+    <Content Include="Images\Lappbar.bike.png" />
+    <Content Include="Images\Lappbar.download.png" />
+    <Content Include="Images\Lappbar.man.suitcase.run.png" />
+    <Content Include="Images\Lappbar.man.walk.png" />
+    <Content Include="Images\Lappbar.map.png" />
+    <Content Include="Images\Lappbar.moon.waning.crescent.png" />
+    <Content Include="Images\Lappbar.questionmark.rest.png" />
+    <Content Include="Images\Lappbar.share.png" />
+    <Content Include="Images\Lappbar.sync.rest.on.png" />
+    <Content Include="Images\Lappbar.sync.rest.png" />
+    <Content Include="Images\Lappbar.upload.png" />
+    <Content Include="Images\Lappbar.weather.sun.png" />
+    <Content Include="Images\Lfullscreen.expand.png" />
+    <Content Include="Images\Lfullscreen.shrink.png" />
+    <Content Include="Images\like.png" />
+    <Content Include="Images\linkto.png" />
+    <Content Include="Images\linkto.withlinks.png" />
+    <Content Include="Images\Lmap.centerme.png" />
+    <Content Include="Images\Lmap.direction.off.png" />
+    <Content Include="Images\Lmap.direction.png" />
+    <Content Include="Images\lock.png" />
+    <Content Include="Images\Lphoto.light.off.png" />
+    <Content Include="Images\Lphoto.light.on.png" />
+    <Content Include="Images\Lphoto.redeyes.png" />
+    <Content Include="Images\manage.png" />
+    <Content Include="Images\map.centerme.png" />
+    <Content Include="Images\map.checkin.png" />
+    <Content Include="Images\map.direction.off.png" />
+    <Content Include="Images\map.direction.png" />
+    <Content Include="Images\map.neighborhood.png" />
+    <Content Include="Images\map.turningpoint.png" />
+    <Content Include="Images\marketplace.png" />
+    <Content Include="Images\mic.png" />
+    <Content Include="Images\microphone.png" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\new.png" />
+    <Content Include="Images\next.png" />
+    <Content Include="Images\nfc.png" />
+    <Content Include="Images\noArt.png" />
+    <Content Include="Images\notes.png" />
+    <Content Include="Images\outline.squares.png" />
+    <Content Include="Images\overflowdots.png" />
+    <Content Include="Images\people.contacts.png" />
+    <Content Include="Images\people.groups.png" />
+    <Content Include="Images\photo.aspect.png" />
+    <Content Include="Images\photo.crop.png" />
+    <Content Include="Images\photo.fix.png" />
+    <Content Include="Images\photo.fix.undo.png" />
+    <Content Include="Images\photo.flash.auto.png" />
+    <Content Include="Images\photo.flash.off.png" />
+    <Content Include="Images\photo.flash.on.png" />
+    <Content Include="Images\photo.light.off.png" />
+    <Content Include="Images\photo.light.on.png" />
+    <Content Include="Images\photo.redeyes.png" />
+    <Content Include="Images\photo.rotate.png" />
+    <Content Include="Images\pin.png" />
+    <Content Include="Images\pin.remove.png" />
+    <Content Include="Images\play.png" />
+    <Content Include="Images\play.smartdj.png" />
+    <Content Include="Images\question.png" />
+    <Content Include="Images\questionmark.png" />
+    <Content Include="Images\record.png" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\replymeetingrequest.png" />
+    <Content Include="Images\respond.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\search.refine.png" />
+    <Content Include="Images\seeInfo.png" />
+    <Content Include="Images\send.message.png" />
+    <Content Include="Images\send.mylocation.png" />
+    <Content Include="Images\send.photo.png" />
+    <Content Include="Images\send.poi.png" />
+    <Content Include="Images\send.text.png" />
+    <Content Include="Images\send.video.png" />
+    <Content Include="Images\share.png" />
+    <Content Include="Images\slideshow.png" />
+    <Content Include="Images\sms.png" />
+    <Content Include="Images\social.like.png" />
+    <Content Include="Images\social.retweet.png" />
+    <Content Include="Images\social.unlike.png" />
+    <Content Include="Images\sort.png" />
+    <Content Include="Images\speaker.png" />
+    <Content Include="Images\status.png" />
+    <Content Include="Images\stop.png" />
+    <Content Include="Images\sum.png" />
+    <Content Include="Images\switch.png" />
+    <Content Include="Images\sync.png" />
+    <Content Include="Images\tabs.2.png" />
+    <Content Include="Images\tabs.3.png" />
+    <Content Include="Images\tabs.4.png" />
+    <Content Include="Images\tabs.5.png" />
+    <Content Include="Images\tabs.6.png" />
+    <Content Include="Images\tabs.png" />
+    <Content Include="Images\the_music_icon.png" />
+    <Content Include="Images\time.png" />
+    <Content Include="Images\transport.ff.png" />
+    <Content Include="Images\transport.pause.png" />
+    <Content Include="Images\transport.play.png" />
+    <Content Include="Images\transport.repeat.png" />
+    <Content Include="Images\transport.repeatone.png" />
+    <Content Include="Images\transport.rew.png" />
+    <Content Include="Images\transport.shuffle.png" />
+    <Content Include="Images\up.png" />
+    <Content Include="Images\upload.png" />
+    <Content Include="Images\voicemail.png" />
+    <Content Include="Images\wallet.png" />
+    <Content Include="Images\wifi.1.png" />
+    <Content Include="Images\wifi.2.png" />
+    <Content Include="Images\wifi.3.png" />
+    <Content Include="Images\wifi.4.png" />
+    <Content Include="Images\wifi.5.png" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GeneralSettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NewSessionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PathListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProgressPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SessionDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SessionListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SharePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TextPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TotalListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>1.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>1.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.Sqlite">
+      <Version>1.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client">
+      <Version>1.1.4-preview0002</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Services.Store.Engagement">
+      <Version>10.1711.28001</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Services.Store.SDK">
+      <Version>10.1705.16001</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Services">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Template10">
+      <Version>1.1.12</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
+      <Version>2.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.Advertising.Xaml, Version=10.0">
+      <Name>Microsoft Advertising SDK for XAML</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.Services.Store.Engagement, Version=10.0">
+      <Name>Microsoft Engagement Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsDesktop, Version=10.0.17134.0">
+      <Name>Windows Desktop Extensions for the UWP</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsMobile, Version=10.0.17134.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\UniversalKeepTheRhythm.es.xlf" />
+    <XliffResource Include="MultilingualResources\UniversalKeepTheRhythm.qps-ploc.xlf" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.PriResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
+  <Target Name="AfterBuild">
+    <Message Importance="High" Text="Thank you for using Template 10. Find out more at http://aka.ms/template10" />
+  </Target>
+</Project>

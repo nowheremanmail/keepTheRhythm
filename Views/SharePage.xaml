@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="UniversalKeepTheRhythm.Views.SharePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:controls="using:Template10.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:UniversalKeepTheRhythm.Views"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="using:UniversalKeepTheRhythm.ViewModels" 
+      xmlns:ut="using:UniversalKeepTheRhythm.Converters"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      RequestedTheme="Dark"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:ShareViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+
+
+    <StackPanel Margin="12,0,12,0">
+        <Button Content="Gpx" Command="{x:Bind ViewModel.GpxCommand, Mode=OneTime}"/>
+        <Button Content="Kml"  Command="{x:Bind ViewModel.KmlCommand, Mode=OneTime}"/>
+    </StackPanel>
+</Page>

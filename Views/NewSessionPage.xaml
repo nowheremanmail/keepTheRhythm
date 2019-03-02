@@ -1,0 +1,187 @@
+﻿<Page
+    x:Class="UniversalKeepTheRhythm.Views.NewSessionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalKeepTheRhythm.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      xmlns:dm="using:UniversalKeepTheRhythm.model" 
+    xmlns:nwm="using:nowhereman"
+      RequestedTheme="Dark"
+    xmlns:vm="using:UniversalKeepTheRhythm.ViewModels" 
+    >
+
+    <Page.DataContext>
+        <vm:NewSessionViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Page.BottomAppBar>
+        <CommandBar x:Name="menu">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Uid="startNewWorkout" Label="startNewWorkout" Command="{x:Bind ViewModel.SaveItemCommand}" >
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="{x:Bind ViewModel.IconStartWorkout, Mode=OneWay}"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+
+                <!--<AppBarButton x:Uid="Settings" Label="Settings" Command="{x:Bind ViewModel.SettingsCommand}" >
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Images/appbar.feature.settings.rest.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>-->
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent" Margin="12,0,12,0">
+        <ScrollViewer >
+            <StackPanel>
+                <TextBox Grid.Row="1" Name="pathName" x:Uid="PathDesc"  Text="{x:Bind ViewModel.Path.Description, Mode=TwoWay}" Header="pathName"/>
+                <TextBox Grid.Row="3" x:Uid="SessionDesc" Name="sessionName"  Text="{x:Bind ViewModel.SessionDesc, Mode=TwoWay}" Header="sessionName"/>
+                <ToggleSwitch Grid.Row="4" Name="hasGPS" x:Uid="gpsEnabled" Header="hasGPS"  IsOn="{x:Bind ViewModel.HasGps, Mode=TwoWay}"/>
+                <ToggleSwitch Grid.Row="6" Name="hasAdvices" x:Uid="advicesEnabled" Header="hasAdvices"  IsOn="{x:Bind ViewModel.HasAdvices, Mode=TwoWay}"/>
+
+                <ComboBox Name="pathPicker" x:Uid="pathPicker" Grid.Row="0" Header="pathPicker" ItemsSource="{x:Bind ViewModel.PathsList, Mode=OneWay}"  
+                 SelectedItem="{x:Bind ViewModel.SelectedItem, Mode=TwoWay, Converter={StaticResource TypeConverter}}" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="dm:Sessions">
+                            <Grid Margin="0,0,0,17">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" TextWrapping="Wrap"  Text="{x:Bind DayOfSession, Mode=OneWay}"/>
+                                <TextBlock Grid.Row="1" TextWrapping="Wrap" Margin="12,-6,12,0"  Text="{x:Bind Comment, Mode=OneWay}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <!--<ToggleSwitch Grid.Row="1" Name="intelligence" x:Uid="Intelligence" Header="intelligence"  IsOn="{x:Bind ViewModel.Intelligence, Mode=TwoWay}"/>
+                        <ToggleSwitch Grid.Row="2" Name="intelligenceP" x:Uid="IntelligenceP" Header="intelligenceP"  IsOn="{x:Bind ViewModel.IntelligencePace, Mode=TwoWay}"/>-->
+
+                <ToggleSwitch Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Name="fixDuration" x:Uid="FixDuration" Header="fixDuration" IsOn="{x:Bind ViewModel.FixDuration, Mode=TwoWay}"  />
+
+                <TextBox IsEnabled="{x:Bind fixDuration.IsOn, Mode=OneWay}"  Grid.Column="1" Grid.Row="1" Name="duration" Header="duration" Text="{x:Bind ViewModel.Duration, Mode=TwoWay, Converter={StaticResource timeConverter}}" />
+
+                <ToggleSwitch Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  Name="fixDistance" x:Uid="FixDistance" IsOn="{x:Bind ViewModel.FixDistance, Mode=TwoWay}" />
+
+                <TextBox x:Uid="DistanceH" IsEnabled="{x:Bind fixDistance.IsOn, Mode=OneWay}" Name="distance" Grid.Column="0" Grid.Row="3" Header="distance" Text="{x:Bind ViewModel.Distance, Mode=TwoWay, Converter={StaticResource distanceConverter}}"/>
+
+                <TextBlock  Grid.Row="4"  Grid.Column="0"  Name="avgSpeed"  Text="{x:Bind ViewModel.AvgSpeed, Mode=OneWay ,Converter={StaticResource paceConverter}}"  FontSize="24" />
+
+                <ToggleSwitch Name="isLoopDistance" IsOn="{x:Bind ViewModel.HasLoops, Mode=TwoWay}" Header="EnableLoop" x:Uid="EnableLoop" />
+
+                <Slider Header="{x:Bind ViewModel.LoopDistance, Mode=OneWay, Converter={StaticResource StringConverter}, ConverterParameter='LoopDistance {0} '}" 
+                        IsEnabled="{x:Bind isLoopDistance.IsOn, Mode=OneWay}" Minimum="1000" Maximum="10000" Value="{x:Bind ViewModel.LoopDistance, Mode=TwoWay}" SmallChange="1000" x:Name="LoopDistance" />
+
+                <ToggleSwitch x:Uid="Intelligence" IsOn="{x:Bind ViewModel.Intelligence, Mode=TwoWay}" Header="Intelligence" />
+
+                <!--ToggleSwitch Visibility="Collapsed" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Name="circular" x:Uid="CircularWorkout" /-->
+
+                <Slider Header="{x:Bind ViewModel.GPSaccuracy, Mode=OneWay, Converter={StaticResource StringConverter}, ConverterParameter='GPSAccuracyMax {0} '}" Minimum="1" Maximum="50" IsEnabled="{x:Bind hasGPS.IsOn, Mode=OneWay}"  Value="{x:Bind ViewModel.GPSaccuracy, Mode=TwoWay}" SmallChange="1" x:Name="accuracy" />
+
+                <Slider Header="{x:Bind ViewModel.GPSaccuracyMax, Mode=OneWay, Converter={StaticResource StringConverter}, ConverterParameter='GPSAccuracy {0} '}" Minimum="10" Maximum="99" IsEnabled="{x:Bind hasGPS.IsOn, Mode=OneWay}"  Value="{x:Bind ViewModel.GPSaccuracyMax, Mode=TwoWay}" SmallChange="1" x:Name="accuracyMax" />
+
+                <ToggleSwitch Name="pauseOnObscure" IsOn="{x:Bind ViewModel.PauseOnObscured, Mode=TwoWay}" Header="PauseOnObscure" />
+
+                <ToggleSwitch x:Name="IntelligencePace" IsOn="{x:Bind ViewModel.IntelligencePace, Mode=TwoWay}" Header="IntelligenceP" />
+                <Slider Grid.Row="2" Minimum="1" Maximum="50" Value="{x:Bind ViewModel.TimeToDetectP, Mode=TwoWay}" SmallChange="1" x:Name="timeToDetect" 
+                                Header="{x:Bind ViewModel.TimeToDetectP, Mode=OneWay, Converter={StaticResource StringConverter}, ConverterParameter='TimeToDetectP {0} '}" 
+                                IsEnabled="{x:Bind IntelligencePace.IsOn, Mode=OneWay}" />
+
+                <ToggleSwitch x:Name="IntelligenceRotation" IsOn="{x:Bind ViewModel.IntelligenceRotation, Mode=TwoWay}" Header="IntelligenceR" />
+
+                <Slider Grid.Row="4" Minimum="1" Maximum="50" Value="{x:Bind ViewModel.TimeToDetectR, Mode=TwoWay}"  SmallChange="1" x:Name="timeToDetectR" 
+                            Header="{x:Bind ViewModel.TimeToDetectR, Mode=OneWay, Converter={StaticResource StringConverter}, ConverterParameter='TimeToDetectR {0} '}" 
+                                IsEnabled="{x:Bind IntelligenceRotation.IsOn, Mode=OneWay}" />
+
+                <ComboBox Header="ActionOnTab"  x:Name="actionTap" ItemsSource="{x:Bind ViewModel.ActionOnTabList, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.ActionOnTabCurrent, Mode=TwoWay}" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="nwm:PairCodeDesc">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Bind description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <ComboBox Header="ActionOnDoubleTab"  x:Name="actionDoubleTap" ItemsSource="{x:Bind ViewModel.ActionOnDoubleTabList, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.ActionOnDoubleTabCurrent, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="nwm:PairCodeDesc">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Bind description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+
+                <ComboBox Header="ActionHoldTab"  x:Name="actionHoldTap" ItemsSource="{x:Bind ViewModel.ActionHoldTabList, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.ActionHoldTabCurrent, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="nwm:PairCodeDesc">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Bind description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+
+                <ComboBox Header="ActionVerticalFlick"  x:Name="actionVerticalFlick"  ItemsSource="{x:Bind ViewModel.ActionVerticalFlickList, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.ActionVerticalFlickCurrent, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="nwm:PairCodeDesc">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Bind description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+
+                <ComboBox Header="Action_VerticalFlick"  x:Name="action_VerticalFlick"  ItemsSource="{x:Bind ViewModel.Action_VerticalFlickList, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.Action_VerticalFlickCurrent, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="nwm:PairCodeDesc">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Bind description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+
+                <ComboBox Header="ActionHorizontalFlick"  x:Name="actionHorizontalFlick" ItemsSource="{x:Bind ViewModel.ActionHorizontalFlickList, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.ActionHorizontalFlickCurrent, Mode=TwoWay}" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="nwm:PairCodeDesc">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Bind description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+
+                <ComboBox Header="Action_HorizontalFlick"  x:Name="action_HorizontalFlick" ItemsSource="{x:Bind ViewModel.Action_HorizontalFlickList, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.Action_HorizontalFlickCurrent, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="nwm:PairCodeDesc">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Bind description}"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+
+
+                <TextBox Name="DistanceVoiceAdvice" Header="DistanceVoiceAdvice" Text="{x:Bind ViewModel.VoiceAdvicesTime, Mode=TwoWay, Converter={StaticResource timeConverter}}" />
+
+                <TextBox Name="TimeVoiceAdvice" Header="TimeVoiceAdvice" Text="{x:Bind ViewModel.VoiceAdvicesDistance, Mode=TwoWay, Converter={StaticResource distanceConverter}}"/>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

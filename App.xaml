@@ -1,0 +1,36 @@
+﻿<common:BootStrapper x:Class="UniversalKeepTheRhythm.App"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:common="using:Template10.Common"
+                           xmlns:ut="using:UniversalKeepTheRhythm.Converters"
+      xmlns:tkconverters="using:Microsoft.Toolkit.Uwp.UI.Converters"
+      xmlns:t10converters="using:Template10.Converters"
+>
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles\Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <ut:DistanceConverter x:Key="distanceConverter"/>
+            <ut:SpeedConverter x:Key="speedConverter"/>
+            <ut:PaceConverter x:Key="paceConverter"/>
+            <ut:AltitudeConverter x:Key="altitudeConverter"/>
+            <ut:TimeConverter x:Key="timeConverter"/>
+            <ut:TendencyConverter x:Key="tendencyConverter"/>
+            <t10converters:ChangeTypeConverter x:Key="TypeConverter" />
+            <t10converters:StringFormatConverter x:Key="StringConverter" />
+            
+            <tkconverters:BoolToObjectConverter x:Key="BoolToVisibilityConverter" TrueValue="Visible" FalseValue="Collapsed"/>
+            <tkconverters:BoolToObjectConverter x:Key="BoolToVisibilityConverterNeg" TrueValue="Collapsed" FalseValue="Visible"/>
+            <tkconverters:EmptyStringToObjectConverter x:Key="EmptyToVisibility" EmptyValue="Collapsed" NotEmptyValue="Visible"/>
+            <tkconverters:EmptyStringToObjectConverter x:Key="EmptyToBoolean" EmptyValue="True" NotEmptyValue="False"/>
+            <tkconverters:EmptyStringToObjectConverter x:Key="EmptyToBooleanNeg" EmptyValue="False" NotEmptyValue="True"/>
+            <tkconverters:BoolNegationConverter x:Key="BoolNegationConverter"/>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+
+
+</common:BootStrapper>

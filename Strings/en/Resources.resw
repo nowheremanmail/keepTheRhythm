@@ -1,0 +1,1206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="about1" xml:space="preserve">
+    <value>Keep The Rhythm Beta</value>
+  </data>
+  <data name="aboutText" xml:space="preserve">
+    <value>developed by no.where.man@outlook.com, see http://www.nowhereman.eu for more details</value>
+  </data>
+  <data name="app_name" xml:space="preserve">
+    <value>Keep The Rhythm Beta</value>
+  </data>
+  <data name="Backup" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="BackupData" xml:space="preserve">
+    <value>Backup all data</value>
+  </data>
+  <data name="Cleaning" xml:space="preserve">
+    <value>Deleting all</value>
+  </data>
+  <data name="ConfirmBackup" xml:space="preserve">
+    <value>Backup action will override previous backup. Are you sure you want to continue?</value>
+  </data>
+  <data name="ConfirmDeleteAll" xml:space="preserve">
+    <value>Are you sure you want to remove all data, this action cannot be undone</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Connecting</value>
+  </data>
+  <data name="DeleteAll" xml:space="preserve">
+    <value>Remove all data</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Downloading</value>
+  </data>
+  <data name="ErrorLive" xml:space="preserve">
+    <value>Error trying to connect {0}</value>
+  </data>
+  <data name="Exporting" xml:space="preserve">
+    <value>Exporting</value>
+  </data>
+  <data name="general" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="ImportXml" xml:space="preserve">
+    <value>Import Xml</value>
+  </data>
+  <data name="LiveAccount" xml:space="preserve">
+    <value>Live account</value>
+  </data>
+  <data name="LiveNotConnected" xml:space="preserve">
+    <value>Live account not connected</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="music" xml:space="preserve">
+    <value>Music</value>
+  </data>
+  <data name="objective" xml:space="preserve">
+    <value>Objective</value>
+  </data>
+  <data name="pleasewait" xml:space="preserve">
+    <value>Please wait</value>
+  </data>
+  <data name="pleasewaitimport" xml:space="preserve">
+    <value>Importing. Please wait</value>
+  </data>
+  <data name="Restoring" xml:space="preserve">
+    <value>Restoring</value>
+  </data>
+  <data name="Uploading" xml:space="preserve">
+    <value>Uploading</value>
+  </data>
+  <data name="UploadSuccess" xml:space="preserve">
+    <value>backup file {0} has been created.</value>
+  </data>
+  <data name="UploadUnSuccess" xml:space="preserve">
+    <value>file {0} cannot be created because of {1}</value>
+  </data>
+  <data name="Website" xml:space="preserve">
+    <value>Web site</value>
+  </data>
+  <data name="attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="endKOBackup" xml:space="preserve">
+    <value>Backup cannot be done due to {0}</value>
+  </data>
+  <data name="endKORestore" xml:space="preserve">
+    <value>Restore backup cannot be done due to {0}</value>
+  </data>
+  <data name="endRestore" xml:space="preserve">
+    <value>Restore backup completed</value>
+  </data>
+  <data name="folderNotFound" xml:space="preserve">
+    <value> folder not found</value>
+  </data>
+  <data name="Folders" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="noFileInFolder" xml:space="preserve">
+    <value>File KeepTheRhythm.txt not found</value>
+  </data>
+  <data name="recommend" xml:space="preserve">
+    <value>Rate application</value>
+  </data>
+  <data name="RestoreBackup" xml:space="preserve">
+    <value>Restore backup</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="absoluteDistance.Text" xml:space="preserve">
+    <value>Total distance</value>
+  </data>
+  <data name="absoluteTime.Text" xml:space="preserve">
+    <value>Total time</value>
+  </data>
+  <data name="absoluteWorkouts.Text" xml:space="preserve">
+    <value>Total number of workouts</value>
+  </data>
+  <data name="higherSpeed.Text" xml:space="preserve">
+    <value>Higher speed</value>
+  </data>
+  <data name="longestDistance.Text" xml:space="preserve">
+    <value>Longest workout distance</value>
+  </data>
+  <data name="longestTime" xml:space="preserve">
+    <value>Longest {0} workout time</value>
+  </data>
+  <data name="history.Label" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="pathList" xml:space="preserve">
+    <value>Path List {0}</value>
+  </data>
+  <data name="sessionList" xml:space="preserve">
+    <value>{0} Sessions</value>
+  </data>
+  <data name="Settings.Label" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="share.Label" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="startNewWorkout.Label" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="summaryPage.Header" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="continueWorkout.Label" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="updateDescription" xml:space="preserve">
+    <value>Update session description</value>
+  </data>
+  <data name="TwitterMessage" xml:space="preserve">
+    <value>@Keep_The_Rhythm, I've just finished a new {4} session {2} in {3} - {1}</value>
+  </data>
+  <data name="CurrentTrack" xml:space="preserve">
+    <value>{0} by {1}</value>
+  </data>
+  <data name="EndSessionQuestion" xml:space="preserve">
+    <value>¿are you sure you want to exit current session?</value>
+  </data>
+  <data name="saveSound" xml:space="preserve">
+    <value>Save a spoken advice</value>
+  </data>
+  <data name="Sounds" xml:space="preserve">
+    <value>Sounds</value>
+  </data>
+  <data name="map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="perfil" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="Utils" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="bestPace.Text" xml:space="preserve">
+    <value>Best Pace</value>
+  </data>
+  <data name="ActionHoldTab" xml:space="preserve">
+    <value>Action on hold</value>
+  </data>
+  <data name="ActionHorizontalFlick" xml:space="preserve">
+    <value>Action on right flick</value>
+  </data>
+  <data name="ActionOnDoubleTab" xml:space="preserve">
+    <value>Action on double tab</value>
+  </data>
+  <data name="ActionOnTab" xml:space="preserve">
+    <value>Action on tap</value>
+  </data>
+  <data name="ActionVerticalFlick" xml:space="preserve">
+    <value>Action on down flick</value>
+  </data>
+  <data name="Action_HorizontalFlick" xml:space="preserve">
+    <value>Action on left flick</value>
+  </data>
+  <data name="Action_VerticalFlick" xml:space="preserve">
+    <value>Action on up flick</value>
+  </data>
+  <data name="CalmMusic" xml:space="preserve">
+    <value>Relaxing Music</value>
+  </data>
+  <data name="ChooseAction" xml:space="preserve">
+    <value>Choose an action</value>
+  </data>
+  <data name="ChooseList" xml:space="preserve">
+    <value>Choose a List</value>
+  </data>
+  <data name="FinalMusic" xml:space="preserve">
+    <value>Ending Music</value>
+  </data>
+  <data name="IntroductionMusic" xml:space="preserve">
+    <value>Intro Music</value>
+  </data>
+  <data name="MoveNextAction" xml:space="preserve">
+    <value>Next song</value>
+  </data>
+  <data name="MovePreviousAction" xml:space="preserve">
+    <value>Previous song</value>
+  </data>
+  <data name="NewPath" xml:space="preserve">
+    <value>New {0} path</value>
+  </data>
+  <data name="Nothing" xml:space="preserve">
+    <value>no action</value>
+  </data>
+  <data name="PauseAction" xml:space="preserve">
+    <value>Pause / Resume workout and music</value>
+  </data>
+  <data name="PowerMusic" xml:space="preserve">
+    <value>Power Music</value>
+  </data>
+  <data name="SettingsAction" xml:space="preserve">
+    <value>Action Settings</value>
+  </data>
+  <data name="SettingsMusic" xml:space="preserve">
+    <value>Music Settings</value>
+  </data>
+  <data name="StopAction" xml:space="preserve">
+    <value>Stop workout</value>
+  </data>
+  <data name="WhileMusic" xml:space="preserve">
+    <value>Music during workout</value>
+  </data>
+  <data name="advicesEnabled.Header" xml:space="preserve">
+    <value>Voice advices</value>
+  </data>
+  <data name="canvasEnabled" xml:space="preserve">
+    <value>Canvas</value>
+  </data>
+  <data name="gpsEnabled.Header" xml:space="preserve">
+    <value>GPS</value>
+  </data>
+  <data name="metronomEnabled" xml:space="preserve">
+    <value>Metronome</value>
+  </data>
+  <data name="musicEnabled" xml:space="preserve">
+    <value>Music</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="AcceptQuestion" xml:space="preserve">
+    <value>Accept conditions</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body&gt;&lt;h1&gt;Conditions of Keep The Rhythm&lt;/h1&gt;&lt;p&gt;Keep The Rhythm uses mobile's GPS to trace your position, otherwise it can be disabled at any moment just before starting an activity by clicking onto "no gps". &lt;/p&gt;&lt;p&gt; Data are stored in the user's mobile, and it can be removed at any moment. Application uses data stored to show statistics and other useful information related to sport activities. &lt;/p&gt;&lt;p&gt; When user agrees to share his/her sport activity with others, s/he agrees to share position and listened music. Information will be stored in KML format in user’s skydrive account, by using a Public folder. Shared information will be available to other users by www.nowhereman.eu proxy server. This server will only read information on users demand, and it will never store this information. &lt;/p&gt;&lt;p&gt; Also, Keep The Rhythm provides a backup functionality that requires a skydrive account with a folder called “KeepTheRhythm”. This folder could be private. &lt;/p&gt;&lt;p&gt; In case of any doubt or question, contact the developer at no.where.man@outlook.com &lt;/p&gt; &lt;p&gt;Barcelona Sep-2012&lt;/p&gt; &lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="DisableEnableAdvices" xml:space="preserve">
+    <value>Enable/Disable voice advices</value>
+  </data>
+  <data name="DisableEnableMusic" xml:space="preserve">
+    <value>Enable/Disable music</value>
+  </data>
+  <data name="summaryData" xml:space="preserve">
+    <value>{0} Records (ignored {1})</value>
+  </data>
+  <data name="C" xml:space="preserve">
+    <value>Cycling</value>
+  </data>
+  <data name="choosePath" xml:space="preserve">
+    <value>Select one</value>
+  </data>
+  <data name="cyclingPage.Header" xml:space="preserve">
+    <value>Cycling</value>
+  </data>
+  <data name="paths" xml:space="preserve">
+    <value>Paths</value>
+  </data>
+  <data name="R" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="runningPage.Header" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="W" xml:space="preserve">
+    <value>Walking</value>
+  </data>
+  <data name="walkingPage.Header" xml:space="preserve">
+    <value>Walking</value>
+  </data>
+  <data name="SettingsParams" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="SettingsSpec" xml:space="preserve">
+    <value>{0} Settings</value>
+  </data>
+  <data name="DeletePath.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteSession.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="NewSession" xml:space="preserve">
+    <value>New {0} session</value>
+  </data>
+  <data name="NONE" xml:space="preserve">
+    <value>&lt;None&gt;</value>
+  </data>
+  <data name="PathName" xml:space="preserve">
+    <value>Path at {0}</value>
+  </data>
+  <data name="Altitude.Text" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="Distance.Text" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="Duration.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Pace.Text" xml:space="preserve">
+    <value>Pace</value>
+  </data>
+  <data name="Speed.Text" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="ShowInfo.Label" xml:space="preserve">
+    <value>Show Info</value>
+  </data>
+  <data name="SeeDetail" xml:space="preserve">
+    <value>See details</value>
+  </data>
+  <data name="LastSession.Text" xml:space="preserve">
+    <value>Last session</value>
+  </data>
+  <data name="becalmyouareveryfast" xml:space="preserve">
+    <value>you go very fast</value>
+  </data>
+  <data name="c5minutesfrom" xml:space="preserve">
+    <value>5 minutes from start</value>
+  </data>
+  <data name="c5minutesto" xml:space="preserve">
+    <value>5 minutes to end</value>
+  </data>
+  <data name="comeonyouarelosingtherhythm" xml:space="preserve">
+    <value>you are losing the rhythm</value>
+  </data>
+  <data name="Frecuency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="GPSAccuracy" xml:space="preserve">
+    <value>GPS accuracy {0} m</value>
+  </data>
+  <data name="nowyougottherhythm" xml:space="preserve">
+    <value>you've got the rhythm</value>
+  </data>
+  <data name="PauseOnObscure" xml:space="preserve">
+    <value>Pause on obscure</value>
+  </data>
+  <data name="PlayRecord" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="pressRecord" xml:space="preserve">
+    <value>Press Record</value>
+  </data>
+  <data name="Record" xml:space="preserve">
+    <value>Record</value>
+  </data>
+  <data name="ShowConditions.Header" xml:space="preserve">
+    <value>Accept conditions</value>
+  </data>
+  <data name="StopRecord" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="youareinthemidleofworkout" xml:space="preserve">
+    <value>half distance</value>
+  </data>
+  <data name="youdidhalfworkout" xml:space="preserve">
+    <value>half time</value>
+  </data>
+  <data name="youvejustarrived" xml:space="preserve">
+    <value>congratulations, you reached your goal</value>
+  </data>
+  <data name="youvejustfinished" xml:space="preserve">
+    <value>congratulations, you reached your goal</value>
+  </data>
+  <data name="askBeforeCloseSettings" xml:space="preserve">
+    <value>Are you sure you want to cancel the current operation?</value>
+  </data>
+  <data name="yourAreConnected" xml:space="preserve">
+    <value>Now you are connected. To perform backup or recovery, we recommend you to use a wifi connection.</value>
+  </data>
+  <data name="UploadSuccessBack" xml:space="preserve">
+    <value>backup {0} has been created</value>
+  </data>
+  <data name="textReadyAccuracy" xml:space="preserve">
+    <value>Ready to start</value>
+  </data>
+  <data name="textStarting" xml:space="preserve">
+    <value>Starting</value>
+  </data>
+  <data name="textWaitAccuracy" xml:space="preserve">
+    <value>Wait until your GPS locates you</value>
+  </data>
+  <data name="comeon" xml:space="preserve">
+    <value>Come On</value>
+  </data>
+  <data name="endDistance" xml:space="preserve">
+    <value>{0} from start</value>
+  </data>
+  <data name="endTime" xml:space="preserve">
+    <value>{0} from start</value>
+  </data>
+  <data name="minutesFrom" xml:space="preserve">
+    <value>you've been {1} during {0}</value>
+  </data>
+  <data name="minutesTo" xml:space="preserve">
+    <value>{0} to end</value>
+  </data>
+  <data name="oneHourMinute" xml:space="preserve">
+    <value>{0} hour and {1} minute</value>
+  </data>
+  <data name="oneHourMinutes" xml:space="preserve">
+    <value>{0} hour and {1} minutes</value>
+  </data>
+  <data name="oneHoursMinute" xml:space="preserve">
+    <value>{0} hours and {1} minute</value>
+  </data>
+  <data name="oneHoursMinutes" xml:space="preserve">
+    <value>{0} hours and {1} minutes</value>
+  </data>
+  <data name="oneKilometre" xml:space="preserve">
+    <value>{0} kilometre</value>
+  </data>
+  <data name="oneKilometres" xml:space="preserve">
+    <value>{0} kilometres</value>
+  </data>
+  <data name="oneMinute" xml:space="preserve">
+    <value>{0} minute</value>
+  </data>
+  <data name="oneMinutes" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="rhythmSet" xml:space="preserve">
+    <value>you got the rhythm</value>
+  </data>
+  <data name="toofast" xml:space="preserve">
+    <value>you are going too fast</value>
+  </data>
+  <data name="VoiceAdviceLanguage.Header" xml:space="preserve">
+    <value>Voice language</value>
+  </data>
+  <data name="distanceFrom" xml:space="preserve">
+    <value>you've been {1} for {0} </value>
+  </data>
+  <data name="distanceTo" xml:space="preserve">
+    <value>{0} to end</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="DistanceVoiceAdvice" xml:space="preserve">
+    <value>Distance: voice advice every</value>
+  </data>
+  <data name="FixDistance.Header" xml:space="preserve">
+    <value>Fixed Distance</value>
+  </data>
+  <data name="FixDuration.Header" xml:space="preserve">
+    <value>Fixed Duration</value>
+  </data>
+  <data name="oneHour0Minute" xml:space="preserve">
+    <value>{0} hour</value>
+  </data>
+  <data name="oneHours0Minute" xml:space="preserve">
+    <value>{0} hours</value>
+  </data>
+  <data name="SayInfo" xml:space="preserve">
+    <value>Tell me current distance and time </value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TimeVoiceAdvice" xml:space="preserve">
+    <value>Time: voice advice every</value>
+  </data>
+  <data name="SayInfoText" xml:space="preserve">
+    <value>you've been {2} during {0} and {1}</value>
+  </data>
+  <data name="SayInfoText1" xml:space="preserve">
+    <value>you've been {2} during {0}</value>
+  </data>
+  <data name="BackgroundMessage" xml:space="preserve">
+    <value> is still running</value>
+  </data>
+  <data name="ALL" xml:space="preserve">
+    <value>&lt;All&gt;</value>
+  </data>
+  <data name="oneKmM" xml:space="preserve">
+    <value>{0} kilometre with {1} meter</value>
+  </data>
+  <data name="oneKmMs" xml:space="preserve">
+    <value>{0} kilometre with {1} meters</value>
+  </data>
+  <data name="oneKmsM" xml:space="preserve">
+    <value>{0} kilometres with {1} meter</value>
+  </data>
+  <data name="oneKmsMs" xml:space="preserve">
+    <value>{0} kilometres with {1} meters</value>
+  </data>
+  <data name="oneMeter" xml:space="preserve">
+    <value>{0} meter</value>
+  </data>
+  <data name="oneMeters" xml:space="preserve">
+    <value>{0} meters</value>
+  </data>
+  <data name="AddFree" xml:space="preserve">
+    <value>Remove Banners!</value>
+  </data>
+  <data name="CartoMode.Header" xml:space="preserve">
+    <value>Map view mode</value>
+  </data>
+  <data name="CartoModeAerial" xml:space="preserve">
+    <value>Aerial</value>
+  </data>
+  <data name="CartoModeHybrid" xml:space="preserve">
+    <value>Hybrid</value>
+  </data>
+  <data name="CartoModeRoad" xml:space="preserve">
+    <value>Road</value>
+  </data>
+  <data name="CartoModeTerrain" xml:space="preserve">
+    <value>Terrain</value>
+  </data>
+  <data name="Imperial" xml:space="preserve">
+    <value>Imperial</value>
+  </data>
+  <data name="Metric" xml:space="preserve">
+    <value>Metric</value>
+  </data>
+  <data name="unitMile" xml:space="preserve">
+    <value>{0} mile</value>
+  </data>
+  <data name="unitMiles" xml:space="preserve">
+    <value>{0} miles</value>
+  </data>
+  <data name="Units.Header" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="LiveTile" xml:space="preserve">
+    <value>Live Tile</value>
+  </data>
+  <data name="liveTileUpdate" xml:space="preserve">
+    <value>Refresh every {0} seconds</value>
+  </data>
+  <data name="liveTitle" xml:space="preserve">
+    <value>Last {0} session at {1}</value>
+  </data>
+  <data name="pauseTitle" xml:space="preserve">
+    <value>Paused {0} session </value>
+  </data>
+  <data name="progressTitle1" xml:space="preserve">
+    <value>Last {2} session at {3}  {0}</value>
+  </data>
+  <data name="progressTitle1R" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="progressTitle1S" xml:space="preserve">
+    <value>Last {2} session  {0}</value>
+  </data>
+  <data name="progressTitle1SR" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="progressTitle2" xml:space="preserve">
+    <value>Last {2} session at {3}  {1} in {0}</value>
+  </data>
+  <data name="progressTitle2R" xml:space="preserve">
+    <value>{1} in {0}</value>
+  </data>
+  <data name="progressTitle2S" xml:space="preserve">
+    <value>Last {2} session {1} in {0}</value>
+  </data>
+  <data name="progressTitle2SR" xml:space="preserve">
+    <value>{1} in {0}</value>
+  </data>
+  <data name="workingTitle" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="ContinueWorkoutReader" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="endProgress1" xml:space="preserve">
+    <value>you've just finished {1} in {0} </value>
+  </data>
+  <data name="endProgress2" xml:space="preserve">
+    <value>you've just finished {0}</value>
+  </data>
+  <data name="PauseWorkoutReader" xml:space="preserve">
+    <value>Workout is paused</value>
+  </data>
+  <data name="halfDistance" xml:space="preserve">
+    <value>{0} from start</value>
+  </data>
+  <data name="halfTime" xml:space="preserve">
+    <value>{0} from start</value>
+  </data>
+  <data name="StoreAllPoints.Header" xml:space="preserve">
+    <value>Store all positions</value>
+  </data>
+  <data name="AvgAltitude.Text" xml:space="preserve">
+    <value>Average Altitude</value>
+  </data>
+  <data name="AvgSpeed.Text" xml:space="preserve">
+    <value>Average Speed</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="PlanedPace.Text" xml:space="preserve">
+    <value>Planned Pace</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="PathDesc.Header" xml:space="preserve">
+    <value>Path Description</value>
+  </data>
+  <data name="reallycomeon" xml:space="preserve">
+    <value>Definitely, you has lost the rhythm</value>
+  </data>
+  <data name="RenamePath.Text" xml:space="preserve">
+    <value>Rename </value>
+  </data>
+  <data name="RenameSession.Text" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="SessionDesc.Header" xml:space="preserve">
+    <value>Session Description</value>
+  </data>
+  <data name="GraphInfo.Header" xml:space="preserve">
+    <value>Summary info</value>
+  </data>
+  <data name="GraphInfo0" xml:space="preserve">
+    <value>Time &amp; Distance</value>
+  </data>
+  <data name="GraphInfo1" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="GraphInfo2" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="GraphType.Header" xml:space="preserve">
+    <value>Summary type</value>
+  </data>
+  <data name="GraphType0" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="GraphType1" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="GraphType2" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="maxValueD" xml:space="preserve">
+    <value>Max {0}</value>
+  </data>
+  <data name="maxValueT" xml:space="preserve">
+    <value>Max {0}</value>
+  </data>
+  <data name="ShowGraphSummary.Header" xml:space="preserve">
+    <value>Show graph summary</value>
+  </data>
+  <data name="Today.Text" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="FullMessage" xml:space="preserve">
+    <value>Attention: Full sharing requires skydrive account</value>
+  </data>
+  <data name="FullOrPartial" xml:space="preserve">
+    <value>Full workout</value>
+  </data>
+  <data name="MessageShare" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="TitleShare" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="CircularWorkout" xml:space="preserve">
+    <value>Circular</value>
+  </data>
+  <data name="askBeforeRemove" xml:space="preserve">
+    <value>Are you sure you want to remove it?</value>
+  </data>
+  <data name="ErrorImport" xml:space="preserve">
+    <value>Data cannot be imported because {0}</value>
+  </data>
+  <data name="FollowSession" xml:space="preserve">
+    <value>Follow session</value>
+  </data>
+  <data name="FollowSessionChoose" xml:space="preserve">
+    <value>Select session to want to follow</value>
+  </data>
+  <data name="I" xml:space="preserve">
+    <value>Imported</value>
+  </data>
+  <data name="Imported.Label" xml:space="preserve">
+    <value>Imported</value>
+  </data>
+  <data name="Importing" xml:space="preserve">
+    <value>Importing data, please wait ...</value>
+  </data>
+  <data name="ImportingPage" xml:space="preserve">
+    <value>Import </value>
+  </data>
+  <data name="ImportPage" xml:space="preserve">
+    <value>Import route</value>
+  </data>
+  <data name="ImportSuccess" xml:space="preserve">
+    <value>Data imported. [{0}] points. {1}</value>
+  </data>
+  <data name="ImportSuccessNoData" xml:space="preserve">
+    <value>No data found on file.</value>
+  </data>
+  <data name="DetailKml" xml:space="preserve">
+    <value>at {0} {1}</value>
+  </data>
+  <data name="NameKml" xml:space="preserve">
+    <value>{0} at {1}</value>
+  </data>
+  <data name="BestMarkMessage" xml:space="preserve">
+    <value>Congratulations, this is your personal best {0} mark</value>
+  </data>
+  <data name="LongestDistanceAndFastMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LongestDurationAndFastMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LongestMessage" xml:space="preserve">
+    <value>Congratulations, this is your longest {0} session</value>
+  </data>
+  <data name="alertPush" xml:space="preserve">
+    <value>This application requires push notifications to make it work with more than two players. You can disable at any moment on settings page. Do you allow application to use push notifications?</value>
+  </data>
+  <data name="captionPush" xml:space="preserve">
+    <value>Important</value>
+  </data>
+  <data name="ActionChangeMusic" xml:space="preserve">
+    <value>Change music</value>
+  </data>
+  <data name="ActionChangeObjective" xml:space="preserve">
+    <value>Change objective</value>
+  </data>
+  <data name="ActionSayMessage" xml:space="preserve">
+    <value>Say something</value>
+  </data>
+  <data name="ActionStartChrono" xml:space="preserve">
+    <value>Start chrono</value>
+  </data>
+  <data name="ActionStopChrono" xml:space="preserve">
+    <value>Stop chrono</value>
+  </data>
+  <data name="ListbyDistance" xml:space="preserve">
+    <value>By Distance</value>
+  </data>
+  <data name="EnableLoop.Header" xml:space="preserve">
+    <value>Enable laps</value>
+  </data>
+  <data name="LoopDistance" xml:space="preserve">
+    <value>Lap distance</value>
+  </data>
+  <data name="LOOP_DETECTED" xml:space="preserve">
+    <value>pace is {0} </value>
+  </data>
+  <data name="longestTimeTxt.Text" xml:space="preserve">
+    <value>Longest workout time</value>
+  </data>
+  <data name="attentionreview" xml:space="preserve">
+    <value>Please review Keep The Rhythm</value>
+  </data>
+  <data name="ReviewApplication" xml:space="preserve">
+    <value>Thank you for using Keep The Rhythm for a while now, would you like to review it?</value>
+  </data>
+  <data name="searchmusic" xml:space="preserve">
+    <value>Search it in Nokia Music</value>
+  </data>
+  <data name="searchmusic2" xml:space="preserve">
+    <value>Search it in Music</value>
+  </data>
+  <data name="CompressData.Label" xml:space="preserve">
+    <value>Reduce data stored</value>
+  </data>
+  <data name="GPSAccuracyT" xml:space="preserve">
+    <value>GPS information every {0} secs</value>
+  </data>
+  <data name="emailNWM" xml:space="preserve">
+    <value>no.where.man@outlook.com</value>
+  </data>
+  <data name="Watson0" xml:space="preserve">
+    <value>A problem occurred the last time you ran this application. Would you like to send an email to report it?</value>
+  </data>
+  <data name="Watson1" xml:space="preserve">
+    <value>Report a problem</value>
+  </data>
+  <data name="NowYoucanShare" xml:space="preserve">
+    <value>Do you want to share with your friends?</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="enableRadio" xml:space="preserve">
+    <value>Radio FM</value>
+  </data>
+  <data name="radio" xml:space="preserve">
+    <value>FM Radio</value>
+  </data>
+  <data name="SessionWithNoData" xml:space="preserve">
+    <value>There are no data stored for this session, do you want to remove?</value>
+  </data>
+  <data name="RadioNotSupported" xml:space="preserve">
+    <value>It seems that FM Radio is not supported in this mobile</value>
+  </data>
+  <data name="warnradio" xml:space="preserve">
+    <value>FM Radio requires your headphones as an antenna.</value>
+  </data>
+  <data name="Europe" xml:space="preserve">
+    <value>Europe</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="ModeSelector" xml:space="preserve">
+    <value>Session type</value>
+  </data>
+  <data name="RadioFMMode" xml:space="preserve">
+    <value>FM Radio zone</value>
+  </data>
+  <data name="UnitedStates" xml:space="preserve">
+    <value>United States</value>
+  </data>
+  <data name="FixData.Label" xml:space="preserve">
+    <value>Fix data session</value>
+  </data>
+  <data name="ImportNfc" xml:space="preserve">
+    <value>Import with NFC</value>
+  </data>
+  <data name="ShareNfc" xml:space="preserve">
+    <value>Share by NFC</value>
+  </data>
+  <data name="DateSession.Text" xml:space="preserve">
+    <value>Session date</value>
+  </data>
+  <data name="NfcInfo" xml:space="preserve">
+    <value>First, make sure you both have your wifi, bluetooth and NFC turned on. To start sharing just click OK.</value>
+  </data>
+  <data name="NfcInfo2" xml:space="preserve">
+    <value>Now, hold the two devices back to back. You’ll hear a sound, which signifies that the devices have connected.</value>
+  </data>
+  <data name="NfcInfo3" xml:space="preserve">
+    <value>Something happens, please try again</value>
+  </data>
+  <data name="changePace" xml:space="preserve">
+    <value>changed pace to {0}</value>
+  </data>
+  <data name="changePaceQuestion" xml:space="preserve">
+    <value>going to change pace to {0}</value>
+  </data>
+  <data name="doPause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="doPauseQuestion" xml:space="preserve">
+    <value>Do you want to pause current session?</value>
+  </data>
+  <data name="questionWaitMessage" xml:space="preserve">
+    <value>Or touch screen to ignore</value>
+  </data>
+  <data name="signalLostMessage" xml:space="preserve">
+    <value>GPS signal lost</value>
+  </data>
+  <data name="doContinue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="doContinueQuestion" xml:space="preserve">
+    <value>Do you want to continue current session?</value>
+  </data>
+  <data name="Intelligence" xml:space="preserve">
+    <value>Start &amp; Stop</value>
+  </data>
+  <data name="TimeToDetect" xml:space="preserve">
+    <value>Time to detect pause {0} sec</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
+  <data name="GPSAccuracyMax" xml:space="preserve">
+    <value>GPS max accuracy {0} m</value>
+  </data>
+  <data name="GPSAccuracyMaxT" xml:space="preserve">
+    <value>GPS max inf every {0} secs</value>
+  </data>
+  <data name="IntelligenceP" xml:space="preserve">
+    <value>Adaptative rhythm</value>
+  </data>
+  <data name="TimeToDetectR" xml:space="preserve">
+    <value>Time to detect movement {0} sec</value>
+  </data>
+  <data name="IntelligenceR" xml:space="preserve">
+    <value>Auto Rotation</value>
+  </data>
+  <data name="lapsDetail" xml:space="preserve">
+    <value>Laps Detail</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>WAITING FINISH CALL</value>
+  </data>
+  <data name="ExternalPower" xml:space="preserve">
+    <value>WAITING FOR EXTERNAL POWER</value>
+  </data>
+  <data name="Wifi" xml:space="preserve">
+    <value>WAITING FOR WIFI</value>
+  </data>
+  <data name="DBError" xml:space="preserve">
+    <value>It seems your Database could be corrupted, restart application, if problem persists reinstall the application</value>
+  </data>
+  <data name="DisableStartAndStop" xml:space="preserve">
+    <value>Disable start&amp;stop</value>
+  </data>
+  <data name="EnableStartAndStop" xml:space="preserve">
+    <value>Enable start&amp;stop</value>
+  </data>
+  <data name="Translation" xml:space="preserve">
+    <value>Improve translation</value>
+  </data>
+  <data name="pointinterest" xml:space="preserve">
+    <value>at {0} {1} {2}</value>
+  </data>
+  <data name="AddPoint" xml:space="preserve">
+    <value>add point</value>
+  </data>
+  <data name="ac00.Text" xml:space="preserve">
+    <value>On normal view</value>
+  </data>
+  <data name="PointDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="DeleteSessionL.Label" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Comment.Header" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="NamePath.Header" xml:space="preserve">
+    <value>Path Name</value>
+  </data>
+  <data name="ReallyImportButton.Content" xml:space="preserve">
+    <value>Really Import</value>
+  </data>
+  <data name="DetailInfo.Header" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="GeneralInfo.Header" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="GraphType3" xml:space="preserve">
+    <value>Yearly</value>
+  </data>
+  <data name="LapsInfo.Header" xml:space="preserve">
+    <value>Laps</value>
+  </data>
+  <data name="MapInfo.Header" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="PerfileInfo.Header" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="DistanceH.Header" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="pathPicker.Header" xml:space="preserve">
+    <value>Select a Path</value>
+  </data>
+  <data name="SessionType.Header" xml:space="preserve">
+    <value>Session Type</value>
+  </data>
+  <data name="DurationH.Header" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="acceptButton.Content" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="AcceptQuestionb.OffContent" xml:space="preserve">
+    <value>No Accept!</value>
+  </data>
+  <data name="AcceptQuestionb.OnContent" xml:space="preserve">
+    <value>Accept!</value>
+  </data>
+  <data name="dialog_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="dialog_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ac0.Text" xml:space="preserve">
+    <value>Click on screen</value>
+  </data>
+  <data name="ac1.Text" xml:space="preserve">
+    <value>Double Click on screen</value>
+  </data>
+  <data name="ac10.Text" xml:space="preserve">
+    <value>Long click on screen to see distance between current position and this point</value>
+  </data>
+  <data name="ac11.Text" xml:space="preserve">
+    <value>Double click to store a position</value>
+  </data>
+  <data name="ac12.Text" xml:space="preserve">
+    <value>To center map to current position</value>
+  </data>
+  <data name="ac13.Text" xml:space="preserve">
+    <value>To change map view</value>
+  </data>
+  <data name="ac14.Text" xml:space="preserve">
+    <value>To enable/disable compass</value>
+  </data>
+  <data name="ac15.Text" xml:space="preserve">
+    <value>To enable/disable screen rotation</value>
+  </data>
+  <data name="ac16.Text" xml:space="preserve">
+    <value>You can disable this message and others by enabling expert mode in settings screen</value>
+  </data>
+  <data name="ac17.Text" xml:space="preserve">
+    <value>And now start</value>
+  </data>
+  <data name="ac2.Text" xml:space="preserve">
+    <value>Long Click on screen</value>
+  </data>
+  <data name="ac3.Text" xml:space="preserve">
+    <value>Down flip on screen</value>
+  </data>
+  <data name="ac4.Text" xml:space="preserve">
+    <value>Up flip on screen</value>
+  </data>
+  <data name="ac5.Text" xml:space="preserve">
+    <value>Right flip on screen</value>
+  </data>
+  <data name="ac6.Text" xml:space="preserve">
+    <value>Left flip on screen</value>
+  </data>
+  <data name="ac7.Text" xml:space="preserve">
+    <value>To see map</value>
+  </data>
+  <data name="ac8.Text" xml:space="preserve">
+    <value>To change to night/day mode</value>
+  </data>
+  <data name="ac9.Text" xml:space="preserve">
+    <value>On map view</value>
+  </data>
+  <data name="Gpx" xml:space="preserve">
+    <value>Gpx</value>
+  </data>
+  <data name="Kml" xml:space="preserve">
+    <value>Kml</value>
+  </data>
+</root>

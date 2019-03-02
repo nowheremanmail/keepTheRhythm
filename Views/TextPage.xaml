@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="UniversalKeepTheRhythm.Views.TextPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalKeepTheRhythm.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Background="Black" >
+        <Grid Background="Red" Width="50" Height="50">
+            <TextBlock Text="1Km" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Ellipse Width="4" Height="4" Fill="Black" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </Grid>
+        <RelativePanel>
+            <TextBlock x:Name="p0" Text="En la vista normal" FontSize="24"/>
+            <TextBlock x:Name="ac0" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="p0" Text="Toca la pantalla para [{0}]"/>
+            <TextBlock RelativePanel.AlignVerticalCenterWith="ac0" RelativePanel.RightOf="ac0" Text="0000"/>
+            <TextBlock x:Name="ac1" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="ac0" Text="Doble pulsación en la pantalla para [{1}]"/>
+            <TextBlock x:Name="ac2" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="ac1" Text="pulsación larga en la pantalla para [{2}]"/>
+            <TextBlock x:Name="ac3" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="ac2" Text="Desliza el dedo hacia abajo para [{3}]"/>
+            <TextBlock x:Name="ac4" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="ac3" Text="Desliza el dedo hacia arriba para [{4}]"/>
+            <TextBlock x:Name="ac5" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="ac4" Text="Desliza el dedo hacia a la derecha para [{5}]"/>
+            <TextBlock x:Name="ac6" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="ac5" Text="Desliza el dedo hacia a la izquierda para [{6}]"/>
+
+            <Image x:Name="ac7i" RelativePanel.AlignLeftWith="p0" RelativePanel.Below="ac6" Source="Images/appbar.map.png"/>
+            <TextBlock x:Name="ac7" RelativePanel.RightOf="ac7i" RelativePanel.Below="ac6" Text="Para ver el mapa"/>
+
+            <Image x:Name="ac8i" RelativePanel.Below="ac7" Source="ms-appx:///Images/appbar.moon.waning.crescent.png"/>
+            <Image x:Name="ac8ii" RelativePanel.Below="ac7"  RelativePanel.RightOf="ac8i" Source="Images/appbar.weather.sun.png"/>
+            <TextBlock x:Name="ac8" RelativePanel.Below="ac7" RelativePanel.RightOf="ac8ii" Text="Para cambiar de modo día a noche"/>
+
+            <TextBlock x:Name="p1" RelativePanel.Below="ac8" Text="En la vista con mapa"  FontSize="24"/>
+
+            <TextBlock x:Name="ac9" RelativePanel.Below="p1" Text="pulsación larga en la pantalla para conocer la distancia entre la positició actual y el punto dado"/>
+            <TextBlock x:Name="ac10" RelativePanel.Below="ac9" Text="Doble pulsación para guardar la posició actual"/>
+
+            <Image x:Name="ac11i" RelativePanel.Below="ac10" Source="Images/map.centerme.png"/>
+            <TextBlock x:Name="ac11" RelativePanel.Below="ac10" Text="Para centrar el mapa a la posición actual"/>
+
+            <Image x:Name="ac12i" RelativePanel.Below="ac11" Source="Images/photo.redeyes.png"/>
+            <TextBlock x:Name="ac12" RelativePanel.Below="ac11" Text="Para cambiar la vista del mapa"/>
+
+            <Image x:Name="ac13i" RelativePanel.Below="ac12" Source="Images/map.direction.png"/>
+            <TextBlock x:Name="ac13" RelativePanel.Below="ac12" Text="Para activar/desactivar el compás"/>
+
+            <Image x:Name="ac14i" RelativePanel.Below="ac13" Source="Images/appbar.sync.rest.png"/>
+            <TextBlock x:Name="ac14" RelativePanel.Below="ac13" Text="Para activar/desactivar la rotación de la pantalla"/>
+
+            <TextBlock x:Name="ac15" RelativePanel.Below="ac14" Text="Puedes desactivar éste mensaje y otros, activando el modo experto en la pantalla de configuración"/>
+        </RelativePanel>
+    </StackPanel>
+</Page>

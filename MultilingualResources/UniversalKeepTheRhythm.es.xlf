@@ -1,0 +1,1470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="es" original="UNIVERSALKEEPTHERHYTHM/STRINGS/EN/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="UNIVERSALKEEPTHERHYTHM/STRINGS/EN/RESOURCES.RESW" datatype="resx">
+        <trans-unit id="About" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="translated">Acerca de
+</target>
+        </trans-unit>
+        <trans-unit id="about1" translate="no" xml:space="preserve">
+          <source>Keep The Rhythm Beta</source>
+          <target state="final">Keep The Rhythm Beta</target>
+        </trans-unit>
+        <trans-unit id="aboutText" translate="no" xml:space="preserve">
+          <source>developed by no.where.man@outlook.com, see http://www.nowhereman.eu for more details</source>
+          <target state="final">developed by no.where.man@outlook.com, see http://www.nowhereman.eu for more details</target>
+        </trans-unit>
+        <trans-unit id="app_name" translate="no" xml:space="preserve">
+          <source>Keep The Rhythm Beta</source>
+          <target state="final">Keep The Rhythm Beta</target>
+        </trans-unit>
+        <trans-unit id="Backup" translate="yes" xml:space="preserve">
+          <source>Backup</source>
+          <target state="translated">Copia de Seguridad
+</target>
+        </trans-unit>
+        <trans-unit id="BackupData" translate="yes" xml:space="preserve">
+          <source>Backup all data</source>
+          <target state="translated">Copia de seguridad de todos los datos</target>
+        </trans-unit>
+        <trans-unit id="Cleaning" translate="yes" xml:space="preserve">
+          <source>Deleting all</source>
+          <target state="translated">Borrar todo</target>
+        </trans-unit>
+        <trans-unit id="ConfirmBackup" translate="yes" xml:space="preserve">
+          <source>Backup action will override previous backup. Are you sure you want to continue?</source>
+          <target state="translated">Si realiza una copia de seguridad sobreescribirá la anterior. Está seguro que quiere continuar?</target>
+        </trans-unit>
+        <trans-unit id="ConfirmDeleteAll" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to remove all data, this action cannot be undone</source>
+          <target state="translated">Está seguro que quiere borrar todos los datos? Esta operación no se puede deshacer.</target>
+        </trans-unit>
+        <trans-unit id="Connecting" translate="yes" xml:space="preserve">
+          <source>Connecting</source>
+          <target state="translated">Conectando</target>
+        </trans-unit>
+        <trans-unit id="DeleteAll" translate="yes" xml:space="preserve">
+          <source>Remove all data</source>
+          <target state="translated">Borrar todos los datos</target>
+        </trans-unit>
+        <trans-unit id="Downloading" translate="yes" xml:space="preserve">
+          <source>Downloading</source>
+          <target state="translated">Descargando</target>
+        </trans-unit>
+        <trans-unit id="ErrorLive" translate="yes" xml:space="preserve">
+          <source>Error trying to connect {0}</source>
+          <target state="translated">Error {0} intentando conectarse</target>
+        </trans-unit>
+        <trans-unit id="Exporting" translate="yes" xml:space="preserve">
+          <source>Exporting</source>
+          <target state="translated">Exportando</target>
+        </trans-unit>
+        <trans-unit id="general" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="new">General</target>
+        </trans-unit>
+        <trans-unit id="ImportXml" translate="yes" xml:space="preserve">
+          <source>Import Xml</source>
+          <target state="translated">Importar un Xml</target>
+        </trans-unit>
+        <trans-unit id="LiveAccount" translate="yes" xml:space="preserve">
+          <source>Live account</source>
+          <target state="translated">Cuenta Live</target>
+        </trans-unit>
+        <trans-unit id="LiveNotConnected" translate="yes" xml:space="preserve">
+          <source>Live account not connected</source>
+          <target state="translated">Imposible conectar cuenta Live</target>
+        </trans-unit>
+        <trans-unit id="Loading" translate="yes" xml:space="preserve">
+          <source>Loading</source>
+          <target state="translated">Cargando</target>
+        </trans-unit>
+        <trans-unit id="Login" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="translated">Entrada</target>
+        </trans-unit>
+        <trans-unit id="music" translate="yes" xml:space="preserve">
+          <source>Music</source>
+          <target state="translated">Música</target>
+        </trans-unit>
+        <trans-unit id="objective" translate="yes" xml:space="preserve">
+          <source>Objective</source>
+          <target state="translated">Objetivo</target>
+        </trans-unit>
+        <trans-unit id="pleasewait" translate="yes" xml:space="preserve">
+          <source>Please wait</source>
+          <target state="translated">Espere por favor</target>
+        </trans-unit>
+        <trans-unit id="pleasewaitimport" translate="yes" xml:space="preserve">
+          <source>Importing. Please wait</source>
+          <target state="translated">Espere por favor, importando.</target>
+        </trans-unit>
+        <trans-unit id="Restoring" translate="yes" xml:space="preserve">
+          <source>Restoring</source>
+          <target state="translated">Recuperando datos</target>
+        </trans-unit>
+        <trans-unit id="Uploading" translate="yes" xml:space="preserve">
+          <source>Uploading</source>
+          <target state="translated">Cargando</target>
+        </trans-unit>
+        <trans-unit id="UploadSuccess" translate="yes" xml:space="preserve">
+          <source>backup file {0} has been created.</source>
+          <target state="translated">La copia de seguridad en el fichero {0} se ha creado.</target>
+        </trans-unit>
+        <trans-unit id="UploadUnSuccess" translate="yes" xml:space="preserve">
+          <source>file {0} cannot be created because of {1}</source>
+          <target state="translated">El fichero {0} no se puede crear, por {1}</target>
+        </trans-unit>
+        <trans-unit id="Website" translate="yes" xml:space="preserve">
+          <source>Web site</source>
+          <target state="translated">Sitio Web</target>
+        </trans-unit>
+        <trans-unit id="attention" translate="yes" xml:space="preserve">
+          <source>Attention</source>
+          <target state="translated">Atención</target>
+        </trans-unit>
+        <trans-unit id="endKOBackup" translate="yes" xml:space="preserve">
+          <source>Backup cannot be done due to {0}</source>
+          <target state="translated">No se puede realizar la copia de seguridad, por {0}</target>
+        </trans-unit>
+        <trans-unit id="endKORestore" translate="yes" xml:space="preserve">
+          <source>Restore backup cannot be done due to {0}</source>
+          <target state="translated">No se puede recuperar la copia de seguridad, por {0}</target>
+        </trans-unit>
+        <trans-unit id="endRestore" translate="yes" xml:space="preserve">
+          <source>Restore backup completed</source>
+          <target state="translated">Copia de seguridad restaurada</target>
+        </trans-unit>
+        <trans-unit id="folderNotFound" translate="yes" xml:space="preserve">
+          <source> folder not found</source>
+          <target state="translated">No se puede encontrar la carpeta</target>
+        </trans-unit>
+        <trans-unit id="Folders" translate="yes" xml:space="preserve">
+          <source>Folders</source>
+          <target state="translated">Leyendo carpetas</target>
+        </trans-unit>
+        <trans-unit id="noFileInFolder" translate="yes" xml:space="preserve">
+          <source>File KeepTheRhythm.txt not found</source>
+          <target state="translated">No se encuentra el fichero KeepTheRhythm.txt</target>
+        </trans-unit>
+        <trans-unit id="recommend" translate="yes" xml:space="preserve">
+          <source>Rate application</source>
+          <target state="translated">Puntua la aplicación</target>
+        </trans-unit>
+        <trans-unit id="RestoreBackup" translate="yes" xml:space="preserve">
+          <source>Restore backup</source>
+          <target state="translated">Recuperar copia de seguridad</target>
+        </trans-unit>
+        <trans-unit id="Support" translate="yes" xml:space="preserve">
+          <source>Support</source>
+          <target state="translated">Ayuda</target>
+        </trans-unit>
+        <trans-unit id="absoluteDistance.Text" translate="yes" xml:space="preserve">
+          <source>Total distance</source>
+          <target state="translated">Distancia total</target>
+        </trans-unit>
+        <trans-unit id="absoluteTime.Text" translate="yes" xml:space="preserve">
+          <source>Total time</source>
+          <target state="translated">Duración total</target>
+        </trans-unit>
+        <trans-unit id="absoluteWorkouts.Text" translate="yes" xml:space="preserve">
+          <source>Total number of workouts</source>
+          <target state="translated">Número total de sesiones</target>
+        </trans-unit>
+        <trans-unit id="higherSpeed.Text" translate="yes" xml:space="preserve">
+          <source>Higher speed</source>
+          <target state="translated">Major velocidad</target>
+        </trans-unit>
+        <trans-unit id="longestDistance.Text" translate="yes" xml:space="preserve">
+          <source>Longest workout distance</source>
+          <target state="translated">Distancia más larga</target>
+        </trans-unit>
+        <trans-unit id="longestTime" translate="yes" xml:space="preserve">
+          <source>Longest {0} workout time</source>
+          <target state="translated">La sesión {0} más larga</target>
+        </trans-unit>
+        <trans-unit id="history.Label" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">Historial</target>
+        </trans-unit>
+        <trans-unit id="pathList" translate="yes" xml:space="preserve">
+          <source>Path List {0}</source>
+          <target state="translated">Lista de rutas {0}</target>
+        </trans-unit>
+        <trans-unit id="sessionList" translate="yes" xml:space="preserve">
+          <source>{0} Sessions</source>
+          <target state="translated">Sesiones {0}</target>
+        </trans-unit>
+        <trans-unit id="Settings.Label" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">Configuración</target>
+        </trans-unit>
+        <trans-unit id="share.Label" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="translated">Compartir</target>
+        </trans-unit>
+        <trans-unit id="startNewWorkout.Label" translate="yes" xml:space="preserve">
+          <source>New</source>
+          <target state="translated">Nueva</target>
+        </trans-unit>
+        <trans-unit id="summaryPage.Header" translate="yes" xml:space="preserve">
+          <source>Summary</source>
+          <target state="translated">Sumario</target>
+        </trans-unit>
+        <trans-unit id="continueWorkout.Label" translate="yes" xml:space="preserve">
+          <source>Continue</source>
+          <target state="translated">Continuar</target>
+        </trans-unit>
+        <trans-unit id="updateDescription" translate="yes" xml:space="preserve">
+          <source>Update session description</source>
+          <target state="translated">Actualizar la descripción de la sesión</target>
+        </trans-unit>
+        <trans-unit id="TwitterMessage" translate="yes" xml:space="preserve">
+          <source>@Keep_The_Rhythm, I've just finished a new {4} session {2} in {3} - {1}</source>
+          <target state="translated">@Keep_The_Rhythm, Acabo de finalizar una nueva sesión {4} {2} en {3} - {1}</target>
+        </trans-unit>
+        <trans-unit id="CurrentTrack" translate="yes" xml:space="preserve">
+          <source>{0} by {1}</source>
+          <target state="translated">{0} de {1}</target>
+        </trans-unit>
+        <trans-unit id="EndSessionQuestion" translate="yes" xml:space="preserve">
+          <source>¿are you sure you want to exit current session?</source>
+          <target state="translated">¿Está seguro que quiere finalizar la sesion actual?</target>
+        </trans-unit>
+        <trans-unit id="saveSound" translate="yes" xml:space="preserve">
+          <source>Save a spoken advice</source>
+          <target state="translated">Guardar un mensaje hablado</target>
+        </trans-unit>
+        <trans-unit id="Sounds" translate="yes" xml:space="preserve">
+          <source>Sounds</source>
+          <target state="translated">Sonidos</target>
+        </trans-unit>
+        <trans-unit id="map" translate="yes" xml:space="preserve">
+          <source>Map</source>
+          <target state="translated">Mapa</target>
+        </trans-unit>
+        <trans-unit id="perfil" translate="yes" xml:space="preserve">
+          <source>Section</source>
+          <target state="translated">Sección</target>
+        </trans-unit>
+        <trans-unit id="Utils" translate="yes" xml:space="preserve">
+          <source>Tools</source>
+          <target state="translated">Herramientas</target>
+        </trans-unit>
+        <trans-unit id="bestPace.Text" translate="yes" xml:space="preserve">
+          <source>Best Pace</source>
+          <target state="translated">Mejor ritmo</target>
+        </trans-unit>
+        <trans-unit id="ActionHoldTab" translate="yes" xml:space="preserve">
+          <source>Action on hold</source>
+          <target state="translated">Pulsación Larga</target>
+        </trans-unit>
+        <trans-unit id="ActionHorizontalFlick" translate="yes" xml:space="preserve">
+          <source>Action on right flick</source>
+          <target state="translated">Deslizar a la derecha</target>
+        </trans-unit>
+        <trans-unit id="ActionOnDoubleTab" translate="yes" xml:space="preserve">
+          <source>Action on double tab</source>
+          <target state="translated">Doble pulsación</target>
+        </trans-unit>
+        <trans-unit id="ActionOnTab" translate="yes" xml:space="preserve">
+          <source>Action on tap</source>
+          <target state="translated">Pulsación</target>
+        </trans-unit>
+        <trans-unit id="ActionVerticalFlick" translate="yes" xml:space="preserve">
+          <source>Action on down flick</source>
+          <target state="translated">Deslizar hacia abajo</target>
+        </trans-unit>
+        <trans-unit id="Action_HorizontalFlick" translate="yes" xml:space="preserve">
+          <source>Action on left flick</source>
+          <target state="translated">Deslizar hacia la izquierda</target>
+        </trans-unit>
+        <trans-unit id="Action_VerticalFlick" translate="yes" xml:space="preserve">
+          <source>Action on up flick</source>
+          <target state="translated">Deslizar hacia arriba</target>
+        </trans-unit>
+        <trans-unit id="CalmMusic" translate="yes" xml:space="preserve">
+          <source>Relaxing Music</source>
+          <target state="translated">Música relajante</target>
+        </trans-unit>
+        <trans-unit id="ChooseAction" translate="yes" xml:space="preserve">
+          <source>Choose an action</source>
+          <target state="translated">Elige una acción</target>
+        </trans-unit>
+        <trans-unit id="ChooseList" translate="yes" xml:space="preserve">
+          <source>Choose a List</source>
+          <target state="translated">Elige una lista</target>
+        </trans-unit>
+        <trans-unit id="FinalMusic" translate="yes" xml:space="preserve">
+          <source>Ending Music</source>
+          <target state="translated">Música para finalizar</target>
+        </trans-unit>
+        <trans-unit id="IntroductionMusic" translate="yes" xml:space="preserve">
+          <source>Intro Music</source>
+          <target state="translated">Música para empezar</target>
+        </trans-unit>
+        <trans-unit id="MoveNextAction" translate="yes" xml:space="preserve">
+          <source>Next song</source>
+          <target state="translated">Siguiente canción</target>
+        </trans-unit>
+        <trans-unit id="MovePreviousAction" translate="yes" xml:space="preserve">
+          <source>Previous song</source>
+          <target state="translated">Canción anterior</target>
+        </trans-unit>
+        <trans-unit id="NewPath" translate="yes" xml:space="preserve">
+          <source>New {0} path</source>
+          <target state="translated">Nueva ruta {0}</target>
+        </trans-unit>
+        <trans-unit id="Nothing" translate="yes" xml:space="preserve">
+          <source>no action</source>
+          <target state="translated">Ninguna acción</target>
+        </trans-unit>
+        <trans-unit id="PauseAction" translate="yes" xml:space="preserve">
+          <source>Pause / Resume workout and music</source>
+          <target state="translated">Pausar / Continuar la sesión y la música</target>
+        </trans-unit>
+        <trans-unit id="PowerMusic" translate="yes" xml:space="preserve">
+          <source>Power Music</source>
+          <target state="translated">Música con energía</target>
+        </trans-unit>
+        <trans-unit id="SettingsAction" translate="yes" xml:space="preserve">
+          <source>Action Settings</source>
+          <target state="translated">Configuración de las acciones</target>
+        </trans-unit>
+        <trans-unit id="SettingsMusic" translate="yes" xml:space="preserve">
+          <source>Music Settings</source>
+          <target state="translated">Configuración de la música</target>
+        </trans-unit>
+        <trans-unit id="StopAction" translate="yes" xml:space="preserve">
+          <source>Stop workout</source>
+          <target state="translated">Finalizar sesión</target>
+        </trans-unit>
+        <trans-unit id="WhileMusic" translate="yes" xml:space="preserve">
+          <source>Music during workout</source>
+          <target state="translated">Música durante la sesión</target>
+        </trans-unit>
+        <trans-unit id="advicesEnabled.Header" translate="yes" xml:space="preserve">
+          <source>Voice advices</source>
+          <target state="translated">Avisos de voz</target>
+        </trans-unit>
+        <trans-unit id="canvasEnabled" translate="yes" xml:space="preserve">
+          <source>Canvas</source>
+          <target state="translated">Lienzo</target>
+        </trans-unit>
+        <trans-unit id="gpsEnabled.Header" translate="no" xml:space="preserve">
+          <source>GPS</source>
+          <target state="final">GPS</target>
+        </trans-unit>
+        <trans-unit id="metronomEnabled" translate="yes" xml:space="preserve">
+          <source>Metronome</source>
+          <target state="new">Metronome</target>
+        </trans-unit>
+        <trans-unit id="musicEnabled" translate="yes" xml:space="preserve">
+          <source>Music</source>
+          <target state="translated">Música
+</target>
+        </trans-unit>
+        <trans-unit id="Accept" translate="yes" xml:space="preserve">
+          <source>Accept</source>
+          <target state="translated">Aceptar</target>
+        </trans-unit>
+        <trans-unit id="AcceptQuestion" translate="yes" xml:space="preserve">
+          <source>Accept conditions</source>
+          <target state="translated">Aceptar condiciones</target>
+        </trans-unit>
+        <trans-unit id="Conditions" translate="yes" xml:space="preserve">
+          <source><bpt id="1">&lt;html&gt;</bpt><bpt id="2">&lt;body&gt;</bpt><bpt id="3">&lt;h1&gt;</bpt>Conditions of Keep The Rhythm<ept id="3">&lt;/h1&gt;</ept><bpt id="4">&lt;p&gt;</bpt>Keep The Rhythm uses mobile's GPS to trace your position, otherwise it can be disabled at any moment just before starting an activity by clicking onto "no gps". <ept id="4">&lt;/p&gt;</ept><bpt id="5">&lt;p&gt;</bpt> Data are stored in the user's mobile, and it can be removed at any moment. Application uses data stored to show statistics and other useful information related to sport activities. <ept id="5">&lt;/p&gt;</ept><bpt id="6">&lt;p&gt;</bpt> When user agrees to share his/her sport activity with others, s/he agrees to share position and listened music. Information will be stored in KML format in user’s skydrive account, by using a Public folder. Shared information will be available to other users by www.nowhereman.eu proxy server. This server will only read information on users demand, and it will never store this information. <ept id="6">&lt;/p&gt;</ept><bpt id="7">&lt;p&gt;</bpt> Also, Keep The Rhythm provides a backup functionality that requires a skydrive account with a folder called “KeepTheRhythm”. This folder could be private. <ept id="7">&lt;/p&gt;</ept><bpt id="8">&lt;p&gt;</bpt> In case of any doubt or question, contact the developer at no.where.man@outlook.com <ept id="8">&lt;/p&gt;</ept> <bpt id="9">&lt;p&gt;</bpt>Barcelona Sep-2012<ept id="9">&lt;/p&gt;</ept> <ept id="2">&lt;/body&gt;</ept><ept id="1">&lt;/html&gt;</ept></source>
+          <target state="translated">Está seguro que quiere borrar todos los datos? Esta operación no se puede deshacer.</target>
+        </trans-unit>
+        <trans-unit id="DisableEnableAdvices" translate="yes" xml:space="preserve">
+          <source>Enable/Disable voice advices</source>
+          <target state="translated">Activar/Desactivar avisos de voz</target>
+        </trans-unit>
+        <trans-unit id="DisableEnableMusic" translate="yes" xml:space="preserve">
+          <source>Enable/Disable music</source>
+          <target state="translated">Activar/Desactivar música</target>
+        </trans-unit>
+        <trans-unit id="summaryData" translate="yes" xml:space="preserve">
+          <source>{0} Records (ignored {1})</source>
+          <target state="translated">{0} Registros ({1} ignorados)</target>
+        </trans-unit>
+        <trans-unit id="C" translate="yes" xml:space="preserve">
+          <source>Cycling</source>
+          <target state="translated">En bicicleta</target>
+        </trans-unit>
+        <trans-unit id="choosePath" translate="yes" xml:space="preserve">
+          <source>Select one</source>
+          <target state="translated">Seleccione una</target>
+        </trans-unit>
+        <trans-unit id="cyclingPage.Header" translate="yes" xml:space="preserve">
+          <source>Cycling</source>
+          <target state="translated">En bicicleta</target>
+        </trans-unit>
+        <trans-unit id="paths" translate="yes" xml:space="preserve">
+          <source>Paths</source>
+          <target state="translated">Rutas</target>
+        </trans-unit>
+        <trans-unit id="R" translate="yes" xml:space="preserve">
+          <source>Running</source>
+          <target state="translated">Corriendo</target>
+        </trans-unit>
+        <trans-unit id="runningPage.Header" translate="yes" xml:space="preserve">
+          <source>Running</source>
+          <target state="translated">Corriendo</target>
+        </trans-unit>
+        <trans-unit id="W" translate="yes" xml:space="preserve">
+          <source>Walking</source>
+          <target state="translated">Andando</target>
+        </trans-unit>
+        <trans-unit id="walkingPage.Header" translate="yes" xml:space="preserve">
+          <source>Walking</source>
+          <target state="translated">Andando</target>
+        </trans-unit>
+        <trans-unit id="SettingsParams" translate="yes" xml:space="preserve">
+          <source>Others</source>
+          <target state="translated">Otros</target>
+        </trans-unit>
+        <trans-unit id="SettingsSpec" translate="yes" xml:space="preserve">
+          <source>{0} Settings</source>
+          <target state="translated">Configuración {0}</target>
+        </trans-unit>
+        <trans-unit id="DeletePath.Text" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Borrar</target>
+        </trans-unit>
+        <trans-unit id="DeleteSession.Text" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Borrar</target>
+        </trans-unit>
+        <trans-unit id="NewSession" translate="yes" xml:space="preserve">
+          <source>New {0} session</source>
+          <target state="translated">Nueva sesión {0} </target>
+        </trans-unit>
+        <trans-unit id="NONE" translate="yes" xml:space="preserve">
+          <source><it id="1" pos="open">&lt;None&gt;</it></source>
+          <target state="translated"><it id="1" pos="open">&lt;Ninguna&gt;</it></target>
+        </trans-unit>
+        <trans-unit id="PathName" translate="yes" xml:space="preserve">
+          <source>Path at {0}</source>
+          <target state="translated">Ruta en {0}</target>
+        </trans-unit>
+        <trans-unit id="Altitude.Text" translate="yes" xml:space="preserve">
+          <source>Altitude</source>
+          <target state="translated">Altitud</target>
+        </trans-unit>
+        <trans-unit id="Distance.Text" translate="yes" xml:space="preserve">
+          <source>Distance</source>
+          <target state="translated">Distancia</target>
+        </trans-unit>
+        <trans-unit id="Duration.Text" translate="yes" xml:space="preserve">
+          <source>Duration</source>
+          <target state="translated">Duración</target>
+        </trans-unit>
+        <trans-unit id="Pace.Text" translate="yes" xml:space="preserve">
+          <source>Pace</source>
+          <target state="translated">Ritmo</target>
+        </trans-unit>
+        <trans-unit id="Speed.Text" translate="yes" xml:space="preserve">
+          <source>Speed</source>
+          <target state="translated">Velocidad</target>
+        </trans-unit>
+        <trans-unit id="ShowInfo.Label" translate="yes" xml:space="preserve">
+          <source>Show Info</source>
+          <target state="translated">Mostrar información</target>
+        </trans-unit>
+        <trans-unit id="SeeDetail" translate="yes" xml:space="preserve">
+          <source>See details</source>
+          <target state="translated">Ver detalles</target>
+        </trans-unit>
+        <trans-unit id="LastSession.Text" translate="yes" xml:space="preserve">
+          <source>Last session</source>
+          <target state="translated">Última sesión</target>
+        </trans-unit>
+        <trans-unit id="becalmyouareveryfast" translate="yes" xml:space="preserve">
+          <source>you go very fast</source>
+          <target state="translated">Vas demasiado rápido</target>
+        </trans-unit>
+        <trans-unit id="c5minutesfrom" translate="yes" xml:space="preserve">
+          <source>5 minutes from start</source>
+          <target state="translated">5 minutos desde el inicio</target>
+        </trans-unit>
+        <trans-unit id="c5minutesto" translate="yes" xml:space="preserve">
+          <source>5 minutes to end</source>
+          <target state="translated">5 minutos para finalizar</target>
+        </trans-unit>
+        <trans-unit id="comeonyouarelosingtherhythm" translate="yes" xml:space="preserve">
+          <source>you are losing the rhythm</source>
+          <target state="translated">Estas perdiendo el ritmo</target>
+        </trans-unit>
+        <trans-unit id="Frecuency" translate="yes" xml:space="preserve">
+          <source>Frequency</source>
+          <target state="translated">Frecuencia</target>
+        </trans-unit>
+        <trans-unit id="GPSAccuracy" translate="yes" xml:space="preserve">
+          <source>GPS accuracy {0} m</source>
+          <target state="translated">Precisión del GPS {0} m</target>
+        </trans-unit>
+        <trans-unit id="nowyougottherhythm" translate="yes" xml:space="preserve">
+          <source>you've got the rhythm</source>
+          <target state="translated">Ya tienes el ritmo</target>
+        </trans-unit>
+        <trans-unit id="PauseOnObscure" translate="yes" xml:space="preserve">
+          <source>Pause on obscure</source>
+          <target state="translated">Pausar al pasar a segundo plano</target>
+        </trans-unit>
+        <trans-unit id="PlayRecord" translate="yes" xml:space="preserve">
+          <source>Play</source>
+          <target state="translated">Iniciar</target>
+        </trans-unit>
+        <trans-unit id="pressRecord" translate="yes" xml:space="preserve">
+          <source>Press Record</source>
+          <target state="translated">Pulsa para grabar</target>
+        </trans-unit>
+        <trans-unit id="Record" translate="yes" xml:space="preserve">
+          <source>Record</source>
+          <target state="translated">Grabar</target>
+        </trans-unit>
+        <trans-unit id="ShowConditions.Header" translate="yes" xml:space="preserve">
+          <source>Accept conditions</source>
+          <target state="translated">Aceptar condiciones</target>
+        </trans-unit>
+        <trans-unit id="StopRecord" translate="yes" xml:space="preserve">
+          <source>Stop</source>
+          <target state="translated">Parar</target>
+        </trans-unit>
+        <trans-unit id="youareinthemidleofworkout" translate="yes" xml:space="preserve">
+          <source>half distance</source>
+          <target state="translated">Ya has hecho la mitad del recorrido</target>
+        </trans-unit>
+        <trans-unit id="youdidhalfworkout" translate="yes" xml:space="preserve">
+          <source>half time</source>
+          <target state="translated">Ya has cubierto la mitad del tiempo</target>
+        </trans-unit>
+        <trans-unit id="youvejustarrived" translate="yes" xml:space="preserve">
+          <source>congratulations, you reached your goal</source>
+          <target state="translated">Felicidades, has conseguido tu objetivo</target>
+        </trans-unit>
+        <trans-unit id="youvejustfinished" translate="yes" xml:space="preserve">
+          <source>congratulations, you reached your goal</source>
+          <target state="translated">Felicidades, has conseguido tu objetivo</target>
+        </trans-unit>
+        <trans-unit id="askBeforeCloseSettings" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to cancel the current operation?</source>
+          <target state="translated">Seguro que quieres abortar la operación actual?</target>
+        </trans-unit>
+        <trans-unit id="yourAreConnected" translate="yes" xml:space="preserve">
+          <source>Now you are connected. To perform backup or recovery, we recommend you to use a wifi connection.</source>
+          <target state="translated">Ya estas conectado, se recomienda utilizar la wifi para realizar copias de seguridad o restaurarlas.</target>
+        </trans-unit>
+        <trans-unit id="UploadSuccessBack" translate="yes" xml:space="preserve">
+          <source>backup {0} has been created</source>
+          <target state="translated">Se ha realizado la copia de seguridad {0} </target>
+        </trans-unit>
+        <trans-unit id="textReadyAccuracy" translate="yes" xml:space="preserve">
+          <source>Ready to start</source>
+          <target state="translated">Preparado para empezar</target>
+        </trans-unit>
+        <trans-unit id="textStarting" translate="yes" xml:space="preserve">
+          <source>Starting</source>
+          <target state="translated">Empezando</target>
+        </trans-unit>
+        <trans-unit id="textWaitAccuracy" translate="yes" xml:space="preserve">
+          <source>Wait until your GPS locates you</source>
+          <target state="translated">Espera hasta que el GPS te localice</target>
+        </trans-unit>
+        <trans-unit id="comeon" translate="yes" xml:space="preserve">
+          <source>Come On</source>
+          <target state="translated">Vamos  estás perdiento el ritmo</target>
+        </trans-unit>
+        <trans-unit id="endDistance" translate="yes" xml:space="preserve">
+          <source>{0} from start</source>
+          <target state="translated">{0} desde el inicio</target>
+        </trans-unit>
+        <trans-unit id="endTime" translate="yes" xml:space="preserve">
+          <source>{0} from start</source>
+          <target state="translated">{0} desde el inicio</target>
+        </trans-unit>
+        <trans-unit id="minutesFrom" translate="yes" xml:space="preserve">
+          <source>you've been {1} during {0}</source>
+          <target state="translated">Has estado {1} durante {0}</target>
+        </trans-unit>
+        <trans-unit id="minutesTo" translate="yes" xml:space="preserve">
+          <source>{0} to end</source>
+          <target state="translated">{0} para finalizar</target>
+        </trans-unit>
+        <trans-unit id="oneHourMinute" translate="yes" xml:space="preserve">
+          <source>{0} hour and {1} minute</source>
+          <target state="translated">{0} hora y {1} minuto</target>
+        </trans-unit>
+        <trans-unit id="oneHourMinutes" translate="yes" xml:space="preserve">
+          <source>{0} hour and {1} minutes</source>
+          <target state="translated">{0} hora y {1} minutos</target>
+        </trans-unit>
+        <trans-unit id="oneHoursMinute" translate="yes" xml:space="preserve">
+          <source>{0} hours and {1} minute</source>
+          <target state="translated">{0} horas y {1} minuto</target>
+        </trans-unit>
+        <trans-unit id="oneHoursMinutes" translate="yes" xml:space="preserve">
+          <source>{0} hours and {1} minutes</source>
+          <target state="translated">{0} horas y {1} minutos</target>
+        </trans-unit>
+        <trans-unit id="oneKilometre" translate="yes" xml:space="preserve">
+          <source>{0} kilometre</source>
+          <target state="translated">{0} quilometro</target>
+        </trans-unit>
+        <trans-unit id="oneKilometres" translate="yes" xml:space="preserve">
+          <source>{0} kilometres</source>
+          <target state="translated">{0} quilometros</target>
+        </trans-unit>
+        <trans-unit id="oneMinute" translate="yes" xml:space="preserve">
+          <source>{0} minute</source>
+          <target state="translated">{0} minuto</target>
+        </trans-unit>
+        <trans-unit id="oneMinutes" translate="yes" xml:space="preserve">
+          <source>{0} minutes</source>
+          <target state="translated">{0} minutos</target>
+        </trans-unit>
+        <trans-unit id="rhythmSet" translate="yes" xml:space="preserve">
+          <source>you got the rhythm</source>
+          <target state="translated">Ya tienes el ritmo</target>
+        </trans-unit>
+        <trans-unit id="toofast" translate="yes" xml:space="preserve">
+          <source>you are going too fast</source>
+          <target state="translated">Vas demasiado rápido</target>
+        </trans-unit>
+        <trans-unit id="VoiceAdviceLanguage.Header" translate="yes" xml:space="preserve">
+          <source>Voice language</source>
+          <target state="translated">Idioma de los mensajes de voz</target>
+        </trans-unit>
+        <trans-unit id="distanceFrom" translate="yes" xml:space="preserve">
+          <source>you've been {1} for {0} </source>
+          <target state="translated">Llevas recorrido {1} {0}</target>
+        </trans-unit>
+        <trans-unit id="distanceTo" translate="yes" xml:space="preserve">
+          <source>{0} to end</source>
+          <target state="translated">{0} para finalizar</target>
+        </trans-unit>
+        <trans-unit id="Disabled" translate="yes" xml:space="preserve">
+          <source>Disabled</source>
+          <target state="translated">Desactivado</target>
+        </trans-unit>
+        <trans-unit id="DistanceVoiceAdvice" translate="yes" xml:space="preserve">
+          <source>Distance: voice advice every</source>
+          <target state="translated">Distancia entre los avisos de voz</target>
+        </trans-unit>
+        <trans-unit id="FixDistance.Header" translate="yes" xml:space="preserve">
+          <source>Fixed Distance</source>
+          <target state="translated">Fijar distancia</target>
+        </trans-unit>
+        <trans-unit id="FixDuration.Header" translate="yes" xml:space="preserve">
+          <source>Fixed Duration</source>
+          <target state="translated">Fijar duración</target>
+        </trans-unit>
+        <trans-unit id="oneHour0Minute" translate="yes" xml:space="preserve">
+          <source>{0} hour</source>
+          <target state="translated">{0} hora</target>
+        </trans-unit>
+        <trans-unit id="oneHours0Minute" translate="yes" xml:space="preserve">
+          <source>{0} hours</source>
+          <target state="translated">{0} horas</target>
+        </trans-unit>
+        <trans-unit id="SayInfo" translate="yes" xml:space="preserve">
+          <source>Tell me current distance and time </source>
+          <target state="translated">Avisar de la distancia y tiempo actual</target>
+        </trans-unit>
+        <trans-unit id="Time" translate="yes" xml:space="preserve">
+          <source>Time</source>
+          <target state="translated">Tiempo</target>
+        </trans-unit>
+        <trans-unit id="TimeVoiceAdvice" translate="yes" xml:space="preserve">
+          <source>Time: voice advice every</source>
+          <target state="translated">Tiempo entre avisos de voz</target>
+        </trans-unit>
+        <trans-unit id="SayInfoText" translate="yes" xml:space="preserve">
+          <source>you've been {2} during {0} and {1}</source>
+          <target state="translated">llevas {0} y has recorrido cerca de {1}</target>
+        </trans-unit>
+        <trans-unit id="SayInfoText1" translate="yes" xml:space="preserve">
+          <source>you've been {2} during {0}</source>
+          <target state="translated">llevas {2} durante {0}</target>
+        </trans-unit>
+        <trans-unit id="BackgroundMessage" translate="yes" xml:space="preserve">
+          <source> is still running</source>
+          <target state="translated"> Aun está funcionando</target>
+        </trans-unit>
+        <trans-unit id="ALL" translate="yes" xml:space="preserve">
+          <source><it id="1" pos="open">&lt;All&gt;</it></source>
+          <target state="translated"><it id="1" pos="open">&lt;Todo&gt;</it></target>
+        </trans-unit>
+        <trans-unit id="oneKmM" translate="yes" xml:space="preserve">
+          <source>{0} kilometre with {1} meter</source>
+          <target state="translated">{0} quilometro con {1} metro</target>
+        </trans-unit>
+        <trans-unit id="oneKmMs" translate="yes" xml:space="preserve">
+          <source>{0} kilometre with {1} meters</source>
+          <target state="translated">{0} quilometro con {1} metros</target>
+        </trans-unit>
+        <trans-unit id="oneKmsM" translate="yes" xml:space="preserve">
+          <source>{0} kilometres with {1} meter</source>
+          <target state="translated">{0} quilometros con {1} metro</target>
+        </trans-unit>
+        <trans-unit id="oneKmsMs" translate="yes" xml:space="preserve">
+          <source>{0} kilometres with {1} meters</source>
+          <target state="translated">{0} quilometros con {1} metros</target>
+        </trans-unit>
+        <trans-unit id="oneMeter" translate="yes" xml:space="preserve">
+          <source>{0} meter</source>
+          <target state="translated">{0} metro</target>
+        </trans-unit>
+        <trans-unit id="oneMeters" translate="yes" xml:space="preserve">
+          <source>{0} meters</source>
+          <target state="translated">{0} metros</target>
+        </trans-unit>
+        <trans-unit id="AddFree" translate="yes" xml:space="preserve">
+          <source>Remove Banners!</source>
+          <target state="translated">Eliminar publicidad!</target>
+        </trans-unit>
+        <trans-unit id="CartoMode.Header" translate="yes" xml:space="preserve">
+          <source>Map view mode</source>
+          <target state="translated">Tipo vista del mapa</target>
+        </trans-unit>
+        <trans-unit id="CartoModeAerial" translate="yes" xml:space="preserve">
+          <source>Aerial</source>
+          <target state="translated">Aérea</target>
+        </trans-unit>
+        <trans-unit id="CartoModeHybrid" translate="yes" xml:space="preserve">
+          <source>Hybrid</source>
+          <target state="translated">Híbrida</target>
+        </trans-unit>
+        <trans-unit id="CartoModeRoad" translate="yes" xml:space="preserve">
+          <source>Road</source>
+          <target state="translated">Carretera</target>
+        </trans-unit>
+        <trans-unit id="CartoModeTerrain" translate="yes" xml:space="preserve">
+          <source>Terrain</source>
+          <target state="translated">Tierra</target>
+        </trans-unit>
+        <trans-unit id="Imperial" translate="yes" xml:space="preserve">
+          <source>Imperial</source>
+          <target state="new">Imperial</target>
+        </trans-unit>
+        <trans-unit id="Metric" translate="yes" xml:space="preserve">
+          <source>Metric</source>
+          <target state="translated">Métrico</target>
+        </trans-unit>
+        <trans-unit id="unitMile" translate="yes" xml:space="preserve">
+          <source>{0} mile</source>
+          <target state="translated">{0} milla</target>
+        </trans-unit>
+        <trans-unit id="unitMiles" translate="yes" xml:space="preserve">
+          <source>{0} miles</source>
+          <target state="translated">{0} millas</target>
+        </trans-unit>
+        <trans-unit id="Units.Header" translate="yes" xml:space="preserve">
+          <source>Unit</source>
+          <target state="translated">Unidades</target>
+        </trans-unit>
+        <trans-unit id="LiveTile" translate="yes" xml:space="preserve">
+          <source>Live Tile</source>
+          <target state="new">Live Tile</target>
+        </trans-unit>
+        <trans-unit id="liveTileUpdate" translate="yes" xml:space="preserve">
+          <source>Refresh every {0} seconds</source>
+          <target state="translated">Refrescar cada {0} segundos</target>
+        </trans-unit>
+        <trans-unit id="liveTitle" translate="yes" xml:space="preserve">
+          <source>Last {0} session at {1}</source>
+          <target state="translated">Última sesión {0} el {1}</target>
+        </trans-unit>
+        <trans-unit id="pauseTitle" translate="yes" xml:space="preserve">
+          <source>Paused {0} session </source>
+          <target state="translated">Sesión {0} en pausa</target>
+        </trans-unit>
+        <trans-unit id="progressTitle1" translate="yes" xml:space="preserve">
+          <source>Last {2} session at {3}  {0}</source>
+          <target state="translated">Última sesión {2} el {3}  {0}</target>
+        </trans-unit>
+        <trans-unit id="progressTitle1R" translate="yes" xml:space="preserve">
+          <source>{0}</source>
+          <target state="new">{0}</target>
+        </trans-unit>
+        <trans-unit id="progressTitle1S" translate="yes" xml:space="preserve">
+          <source>Last {2} session  {0}</source>
+          <target state="translated">Última sesión {2} {0}</target>
+        </trans-unit>
+        <trans-unit id="progressTitle1SR" translate="yes" xml:space="preserve">
+          <source>{0}</source>
+          <target state="new">{0}</target>
+        </trans-unit>
+        <trans-unit id="progressTitle2" translate="yes" xml:space="preserve">
+          <source>Last {2} session at {3}  {1} in {0}</source>
+          <target state="translated">Última sesión {2} con {3}  {1} en {0}</target>
+        </trans-unit>
+        <trans-unit id="progressTitle2R" translate="yes" xml:space="preserve">
+          <source>{1} in {0}</source>
+          <target state="translated">{1} en {0}</target>
+        </trans-unit>
+        <trans-unit id="progressTitle2S" translate="yes" xml:space="preserve">
+          <source>Last {2} session {1} in {0}</source>
+          <target state="translated">Última sesión {2} {1} en {0}</target>
+        </trans-unit>
+        <trans-unit id="progressTitle2SR" translate="yes" xml:space="preserve">
+          <source>{1} in {0}</source>
+          <target state="translated">{1} en {0}</target>
+        </trans-unit>
+        <trans-unit id="workingTitle" translate="yes" xml:space="preserve">
+          <source>{0}</source>
+          <target state="new">{0}</target>
+        </trans-unit>
+        <trans-unit id="ContinueWorkoutReader" translate="yes" xml:space="preserve">
+          <source>Continue</source>
+          <target state="translated">Continuar</target>
+        </trans-unit>
+        <trans-unit id="endProgress1" translate="yes" xml:space="preserve">
+          <source>you've just finished {1} in {0} </source>
+          <target state="translated">Acabas de realizar {1} en {0}</target>
+        </trans-unit>
+        <trans-unit id="endProgress2" translate="yes" xml:space="preserve">
+          <source>you've just finished {0}</source>
+          <target state="translated">Acabas de realizar {0}</target>
+        </trans-unit>
+        <trans-unit id="PauseWorkoutReader" translate="yes" xml:space="preserve">
+          <source>Workout is paused</source>
+          <target state="translated">Sesión en pausa</target>
+        </trans-unit>
+        <trans-unit id="halfDistance" translate="yes" xml:space="preserve">
+          <source>{0} from start</source>
+          <target state="translated">{0} desde el inicio</target>
+        </trans-unit>
+        <trans-unit id="halfTime" translate="yes" xml:space="preserve">
+          <source>{0} from start</source>
+          <target state="translated">{0} desde el inicio</target>
+        </trans-unit>
+        <trans-unit id="StoreAllPoints.Header" translate="yes" xml:space="preserve">
+          <source>Store all positions</source>
+          <target state="translated">Almacenar todas las posiciones</target>
+        </trans-unit>
+        <trans-unit id="AvgAltitude.Text" translate="yes" xml:space="preserve">
+          <source>Average Altitude</source>
+          <target state="translated">Altitud media</target>
+        </trans-unit>
+        <trans-unit id="AvgSpeed.Text" translate="yes" xml:space="preserve">
+          <source>Average Speed</source>
+          <target state="translated">Velocidad media</target>
+        </trans-unit>
+        <trans-unit id="details" translate="yes" xml:space="preserve">
+          <source>Details</source>
+          <target state="translated">Detalles</target>
+        </trans-unit>
+        <trans-unit id="PlanedPace.Text" translate="yes" xml:space="preserve">
+          <source>Planned Pace</source>
+          <target state="translated">Ritmo planificado</target>
+        </trans-unit>
+        <trans-unit id="Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Cancelar</target>
+        </trans-unit>
+        <trans-unit id="PathDesc.Header" translate="yes" xml:space="preserve">
+          <source>Path Description</source>
+          <target state="translated">Descripción de la ruta</target>
+        </trans-unit>
+        <trans-unit id="reallycomeon" translate="yes" xml:space="preserve">
+          <source>Definitely, you has lost the rhythm</source>
+          <target state="translated">Definitivamente has perdido el ritmo</target>
+        </trans-unit>
+        <trans-unit id="RenamePath.Text" translate="yes" xml:space="preserve">
+          <source>Rename </source>
+          <target state="translated">Renombrar</target>
+        </trans-unit>
+        <trans-unit id="RenameSession.Text" translate="yes" xml:space="preserve">
+          <source>Rename</source>
+          <target state="translated">Renombrar</target>
+        </trans-unit>
+        <trans-unit id="SessionDesc.Header" translate="yes" xml:space="preserve">
+          <source>Session Description</source>
+          <target state="translated">Descripción de la sesión</target>
+        </trans-unit>
+        <trans-unit id="GraphInfo.Header" translate="yes" xml:space="preserve">
+          <source>Summary info</source>
+          <target state="translated">Información resumida</target>
+        </trans-unit>
+        <trans-unit id="GraphInfo0" translate="yes" xml:space="preserve">
+          <source>Time &amp; Distance</source>
+          <target state="translated">Tiempo &amp; Distancia</target>
+        </trans-unit>
+        <trans-unit id="GraphInfo1" translate="yes" xml:space="preserve">
+          <source>Time</source>
+          <target state="translated">Tiempo</target>
+        </trans-unit>
+        <trans-unit id="GraphInfo2" translate="yes" xml:space="preserve">
+          <source>Distance</source>
+          <target state="translated">Distancia</target>
+        </trans-unit>
+        <trans-unit id="GraphType.Header" translate="yes" xml:space="preserve">
+          <source>Summary type</source>
+          <target state="translated">Tipo sumario</target>
+        </trans-unit>
+        <trans-unit id="GraphType0" translate="yes" xml:space="preserve">
+          <source>Daily</source>
+          <target state="translated">Diario</target>
+        </trans-unit>
+        <trans-unit id="GraphType1" translate="yes" xml:space="preserve">
+          <source>Weekly</source>
+          <target state="translated">Semanal</target>
+        </trans-unit>
+        <trans-unit id="GraphType2" translate="yes" xml:space="preserve">
+          <source>Monthly</source>
+          <target state="translated">Mensual</target>
+        </trans-unit>
+        <trans-unit id="maxValueD" translate="yes" xml:space="preserve">
+          <source>Max {0}</source>
+          <target state="translated">Máximo {0}</target>
+        </trans-unit>
+        <trans-unit id="maxValueT" translate="yes" xml:space="preserve">
+          <source>Max {0}</source>
+          <target state="translated">Máximo {0}</target>
+        </trans-unit>
+        <trans-unit id="ShowGraphSummary.Header" translate="yes" xml:space="preserve">
+          <source>Show graph summary</source>
+          <target state="translated">Mostrar sumario</target>
+        </trans-unit>
+        <trans-unit id="Today.Text" translate="yes" xml:space="preserve">
+          <source>Today</source>
+          <target state="translated">Hoy</target>
+        </trans-unit>
+        <trans-unit id="FullMessage" translate="yes" xml:space="preserve">
+          <source>Attention: Full sharing requires skydrive account</source>
+          <target state="translated">Atención, para compartir la sesión completa se necesita acceso a onedrive</target>
+        </trans-unit>
+        <trans-unit id="FullOrPartial" translate="yes" xml:space="preserve">
+          <source>Full workout</source>
+          <target state="translated">Sesión completa</target>
+        </trans-unit>
+        <trans-unit id="MessageShare" translate="yes" xml:space="preserve">
+          <source>Message</source>
+          <target state="translated">Mensaje</target>
+        </trans-unit>
+        <trans-unit id="TitleShare" translate="yes" xml:space="preserve">
+          <source>Title</source>
+          <target state="translated">Título</target>
+        </trans-unit>
+        <trans-unit id="CircularWorkout" translate="yes" xml:space="preserve">
+          <source>Circular</source>
+          <target state="translated">Circular</target>
+        </trans-unit>
+        <trans-unit id="askBeforeRemove" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to remove it?</source>
+          <target state="translated">¿Seguro que desea borrar los datos?</target>
+        </trans-unit>
+        <trans-unit id="ErrorImport" translate="yes" xml:space="preserve">
+          <source>Data cannot be imported because {0}</source>
+          <target state="translated">No se pueden importar los datos por el error {0}</target>
+        </trans-unit>
+        <trans-unit id="FollowSession" translate="yes" xml:space="preserve">
+          <source>Follow session</source>
+          <target state="translated">Continuar sesión</target>
+        </trans-unit>
+        <trans-unit id="FollowSessionChoose" translate="yes" xml:space="preserve">
+          <source>Select session to want to follow</source>
+          <target state="translated">Seleccione la sesión que desea continuar</target>
+        </trans-unit>
+        <trans-unit id="I" translate="yes" xml:space="preserve">
+          <source>Imported</source>
+          <target state="translated">Importados</target>
+        </trans-unit>
+        <trans-unit id="Imported.Label" translate="yes" xml:space="preserve">
+          <source>Imported</source>
+          <target state="translated">Importados</target>
+        </trans-unit>
+        <trans-unit id="Importing" translate="yes" xml:space="preserve">
+          <source>Importing data, please wait ...</source>
+          <target state="translated">Importando datos, por favor espere ...</target>
+        </trans-unit>
+        <trans-unit id="ImportingPage" translate="yes" xml:space="preserve">
+          <source>Import </source>
+          <target state="translated">Importar</target>
+        </trans-unit>
+        <trans-unit id="ImportPage" translate="yes" xml:space="preserve">
+          <source>Import route</source>
+          <target state="translated">Importar ruta</target>
+        </trans-unit>
+        <trans-unit id="ImportSuccess" translate="yes" xml:space="preserve">
+          <source>Data imported. [{0}] points. {1}</source>
+          <target state="translated">Datos importados. [{0}] puntos. {1}</target>
+        </trans-unit>
+        <trans-unit id="ImportSuccessNoData" translate="yes" xml:space="preserve">
+          <source>No data found on file.</source>
+          <target state="translated">No existen datos en el fichero seleccionado</target>
+        </trans-unit>
+        <trans-unit id="DetailKml" translate="yes" xml:space="preserve">
+          <source>at {0} {1}</source>
+          <target state="translated">de {0} {1}</target>
+        </trans-unit>
+        <trans-unit id="NameKml" translate="yes" xml:space="preserve">
+          <source>{0} at {1}</source>
+          <target state="translated">{0} en {1}</target>
+        </trans-unit>
+        <trans-unit id="BestMarkMessage" translate="yes" xml:space="preserve">
+          <source>Congratulations, this is your personal best {0} mark</source>
+          <target state="translated">Felicidades, esta es tu mejor marca personal {0} </target>
+        </trans-unit>
+        <trans-unit id="LongestDistanceAndFastMessage" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="new"></target>
+        </trans-unit>
+        <trans-unit id="LongestDurationAndFastMessage" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="new"></target>
+        </trans-unit>
+        <trans-unit id="LongestMessage" translate="yes" xml:space="preserve">
+          <source>Congratulations, this is your longest {0} session</source>
+          <target state="translated">Felicidades, esta es tu sesión {0} más larga</target>
+        </trans-unit>
+        <trans-unit id="alertPush" translate="yes" xml:space="preserve">
+          <source>This application requires push notifications to make it work with more than two players. You can disable at any moment on settings page. Do you allow application to use push notifications?</source>
+          <target state="new">This application requires push notifications to make it work with more than two players. You can disable at any moment on settings page. Do you allow application to use push notifications?</target>
+        </trans-unit>
+        <trans-unit id="captionPush" translate="yes" xml:space="preserve">
+          <source>Important</source>
+          <target state="translated">Importante</target>
+        </trans-unit>
+        <trans-unit id="ActionChangeMusic" translate="yes" xml:space="preserve">
+          <source>Change music</source>
+          <target state="translated">Cambiar música</target>
+        </trans-unit>
+        <trans-unit id="ActionChangeObjective" translate="yes" xml:space="preserve">
+          <source>Change objective</source>
+          <target state="translated">Cambiar objetivo</target>
+        </trans-unit>
+        <trans-unit id="ActionSayMessage" translate="yes" xml:space="preserve">
+          <source>Say something</source>
+          <target state="translated">Di algo</target>
+        </trans-unit>
+        <trans-unit id="ActionStartChrono" translate="yes" xml:space="preserve">
+          <source>Start chrono</source>
+          <target state="translated">Iniciar cronómetro</target>
+        </trans-unit>
+        <trans-unit id="ActionStopChrono" translate="yes" xml:space="preserve">
+          <source>Stop chrono</source>
+          <target state="translated">Pausar cronómetro</target>
+        </trans-unit>
+        <trans-unit id="ListbyDistance" translate="yes" xml:space="preserve">
+          <source>By Distance</source>
+          <target state="translated">Por Distancia</target>
+        </trans-unit>
+        <trans-unit id="EnableLoop.Header" translate="yes" xml:space="preserve">
+          <source>Enable laps</source>
+          <target state="translated">Activar vueltas</target>
+        </trans-unit>
+        <trans-unit id="LoopDistance" translate="yes" xml:space="preserve">
+          <source>Lap distance</source>
+          <target state="translated">Distancia de la vuelta</target>
+        </trans-unit>
+        <trans-unit id="LOOP_DETECTED" translate="yes" xml:space="preserve">
+          <source>pace is {0} </source>
+          <target state="translated">El ritmo es {0} </target>
+        </trans-unit>
+        <trans-unit id="longestTimeTxt.Text" translate="yes" xml:space="preserve">
+          <source>Longest workout time</source>
+          <target state="translated">Tiempo de la sesión más larga</target>
+        </trans-unit>
+        <trans-unit id="attentionreview" translate="yes" xml:space="preserve">
+          <source>Please review Keep The Rhythm</source>
+          <target state="translated">Por favor opina sobre Keep The Rhythm</target>
+        </trans-unit>
+        <trans-unit id="ReviewApplication" translate="yes" xml:space="preserve">
+          <source>Thank you for using Keep The Rhythm for a while now, would you like to review it?</source>
+          <target state="translated">Gracias por utilizar Keep The Rhythm, deseas opinar sobre ella?</target>
+        </trans-unit>
+        <trans-unit id="searchmusic" translate="yes" xml:space="preserve">
+          <source>Search it in Nokia Music</source>
+          <target state="new">Search it in Nokia Music</target>
+        </trans-unit>
+        <trans-unit id="searchmusic2" translate="yes" xml:space="preserve">
+          <source>Search it in Music</source>
+          <target state="new">Search it in Music</target>
+        </trans-unit>
+        <trans-unit id="CompressData.Label" translate="yes" xml:space="preserve">
+          <source>Reduce data stored</source>
+          <target state="translated">Reducir datos almacenados</target>
+        </trans-unit>
+        <trans-unit id="GPSAccuracyT" translate="yes" xml:space="preserve">
+          <source>GPS information every {0} secs</source>
+          <target state="translated">El GPS devuleve datos cada {0} segundos</target>
+        </trans-unit>
+        <trans-unit id="emailNWM" translate="yes" xml:space="preserve">
+          <source>no.where.man@outlook.com</source>
+          <target state="new">no.where.man@outlook.com</target>
+        </trans-unit>
+        <trans-unit id="Watson0" translate="yes" xml:space="preserve">
+          <source>A problem occurred the last time you ran this application. Would you like to send an email to report it?</source>
+          <target state="new">A problem occurred the last time you ran this application. Would you like to send an email to report it?</target>
+        </trans-unit>
+        <trans-unit id="Watson1" translate="yes" xml:space="preserve">
+          <source>Report a problem</source>
+          <target state="translated">Reportar un problema</target>
+        </trans-unit>
+        <trans-unit id="NowYoucanShare" translate="yes" xml:space="preserve">
+          <source>Do you want to share with your friends?</source>
+          <target state="translated">¿Desea compartir la sesión con sus amigos?</target>
+        </trans-unit>
+        <trans-unit id="Question" translate="yes" xml:space="preserve">
+          <source>Question</source>
+          <target state="translated">Pregunta</target>
+        </trans-unit>
+        <trans-unit id="enableRadio" translate="yes" xml:space="preserve">
+          <source>Radio FM</source>
+          <target state="new">Radio FM</target>
+        </trans-unit>
+        <trans-unit id="radio" translate="yes" xml:space="preserve">
+          <source>FM Radio</source>
+          <target state="new">FM Radio</target>
+        </trans-unit>
+        <trans-unit id="SessionWithNoData" translate="yes" xml:space="preserve">
+          <source>There are no data stored for this session, do you want to remove?</source>
+          <target state="translated">No se ha almacenado ningún dato, ¿desea borrarla?</target>
+        </trans-unit>
+        <trans-unit id="RadioNotSupported" translate="yes" xml:space="preserve">
+          <source>It seems that FM Radio is not supported in this mobile</source>
+          <target state="new">It seems that FM Radio is not supported in this mobile</target>
+        </trans-unit>
+        <trans-unit id="warnradio" translate="yes" xml:space="preserve">
+          <source>FM Radio requires your headphones as an antenna.</source>
+          <target state="new">FM Radio requires your headphones as an antenna.</target>
+        </trans-unit>
+        <trans-unit id="Europe" translate="yes" xml:space="preserve">
+          <source>Europe</source>
+          <target state="new">Europe</target>
+        </trans-unit>
+        <trans-unit id="Japan" translate="yes" xml:space="preserve">
+          <source>Japan</source>
+          <target state="new">Japan</target>
+        </trans-unit>
+        <trans-unit id="ModeSelector" translate="yes" xml:space="preserve">
+          <source>Session type</source>
+          <target state="translated">Tipo sesión</target>
+        </trans-unit>
+        <trans-unit id="RadioFMMode" translate="yes" xml:space="preserve">
+          <source>FM Radio zone</source>
+          <target state="new">FM Radio zone</target>
+        </trans-unit>
+        <trans-unit id="UnitedStates" translate="yes" xml:space="preserve">
+          <source>United States</source>
+          <target state="new">United States</target>
+        </trans-unit>
+        <trans-unit id="FixData.Label" translate="yes" xml:space="preserve">
+          <source>Fix data session</source>
+          <target state="translated">Corregir datos de la sesión</target>
+        </trans-unit>
+        <trans-unit id="ImportNfc" translate="yes" xml:space="preserve">
+          <source>Import with NFC</source>
+          <target state="translated">Importar usando NFC</target>
+        </trans-unit>
+        <trans-unit id="ShareNfc" translate="yes" xml:space="preserve">
+          <source>Share by NFC</source>
+          <target state="translated">Compartir usando NFC</target>
+        </trans-unit>
+        <trans-unit id="DateSession.Text" translate="yes" xml:space="preserve">
+          <source>Session date</source>
+          <target state="translated">Fecha sesión</target>
+        </trans-unit>
+        <trans-unit id="NfcInfo" translate="yes" xml:space="preserve">
+          <source>First, make sure you both have your wifi, bluetooth and NFC turned on. To start sharing just click OK.</source>
+          <target state="new">First, make sure you both have your wifi, bluetooth and NFC turned on. To start sharing just click OK.</target>
+        </trans-unit>
+        <trans-unit id="NfcInfo2" translate="yes" xml:space="preserve">
+          <source>Now, hold the two devices back to back. You’ll hear a sound, which signifies that the devices have connected.</source>
+          <target state="new">Now, hold the two devices back to back. You’ll hear a sound, which signifies that the devices have connected.</target>
+        </trans-unit>
+        <trans-unit id="NfcInfo3" translate="yes" xml:space="preserve">
+          <source>Something happens, please try again</source>
+          <target state="new">Something happens, please try again</target>
+        </trans-unit>
+        <trans-unit id="changePace" translate="yes" xml:space="preserve">
+          <source>changed pace to {0}</source>
+          <target state="translated">Cambiar ritmo a {0}</target>
+        </trans-unit>
+        <trans-unit id="changePaceQuestion" translate="yes" xml:space="preserve">
+          <source>going to change pace to {0}</source>
+          <target state="translated">el nuevo ritmo es {0}</target>
+        </trans-unit>
+        <trans-unit id="doPause" translate="yes" xml:space="preserve">
+          <source>Pause</source>
+          <target state="translated">Pausar</target>
+        </trans-unit>
+        <trans-unit id="doPauseQuestion" translate="yes" xml:space="preserve">
+          <source>Do you want to pause current session?</source>
+          <target state="translated">¿Desea borrar la sesión actual?</target>
+        </trans-unit>
+        <trans-unit id="questionWaitMessage" translate="yes" xml:space="preserve">
+          <source>Or touch screen to ignore</source>
+          <target state="translated">O pulsa la pantalla para ignorar</target>
+        </trans-unit>
+        <trans-unit id="signalLostMessage" translate="yes" xml:space="preserve">
+          <source>GPS signal lost</source>
+          <target state="translated">Se ha perdido la señal GPS</target>
+        </trans-unit>
+        <trans-unit id="doContinue" translate="yes" xml:space="preserve">
+          <source>Continue</source>
+          <target state="translated">Continuar</target>
+        </trans-unit>
+        <trans-unit id="doContinueQuestion" translate="yes" xml:space="preserve">
+          <source>Do you want to continue current session?</source>
+          <target state="translated">¿Desea continuar con la sesión actual?</target>
+        </trans-unit>
+        <trans-unit id="Intelligence" translate="yes" xml:space="preserve">
+          <source>Start &amp; Stop</source>
+          <target state="translated">Iniciar &amp; Pausar</target>
+        </trans-unit>
+        <trans-unit id="TimeToDetect" translate="yes" xml:space="preserve">
+          <source>Time to detect pause {0} sec</source>
+          <target state="translated">{0} segundos para detectar pausas</target>
+        </trans-unit>
+        <trans-unit id="ExpertMode.Header" translate="yes" xml:space="preserve">
+          <source>Expert mode</source>
+          <target state="translated">Modo experto</target>
+        </trans-unit>
+        <trans-unit id="GPSAccuracyMax" translate="yes" xml:space="preserve">
+          <source>GPS max accuracy {0} m</source>
+          <target state="translated">La precisión del GPS es {0} m</target>
+        </trans-unit>
+        <trans-unit id="GPSAccuracyMaxT" translate="yes" xml:space="preserve">
+          <source>GPS max inf every {0} secs</source>
+          <target state="translated">Cada {0} segundos el GPS informa de la posición</target>
+        </trans-unit>
+        <trans-unit id="IntelligenceP" translate="yes" xml:space="preserve">
+          <source>Adaptative rhythm</source>
+          <target state="translated">Ritmo adaptativo</target>
+        </trans-unit>
+        <trans-unit id="TimeToDetectR" translate="yes" xml:space="preserve">
+          <source>Time to detect movement {0} sec</source>
+          <target state="translated">{0} segundos para detectar movimiento</target>
+        </trans-unit>
+        <trans-unit id="IntelligenceR" translate="yes" xml:space="preserve">
+          <source>Auto Rotation</source>
+          <target state="translated">Rotación automática</target>
+        </trans-unit>
+        <trans-unit id="lapsDetail" translate="yes" xml:space="preserve">
+          <source>Laps Detail</source>
+          <target state="translated">Detalle de las vueltas</target>
+        </trans-unit>
+        <trans-unit id="Call" translate="yes" xml:space="preserve">
+          <source>WAITING FINISH CALL</source>
+          <target state="new">WAITING FINISH CALL</target>
+        </trans-unit>
+        <trans-unit id="ExternalPower" translate="yes" xml:space="preserve">
+          <source>WAITING FOR EXTERNAL POWER</source>
+          <target state="new">WAITING FOR EXTERNAL POWER</target>
+        </trans-unit>
+        <trans-unit id="Wifi" translate="yes" xml:space="preserve">
+          <source>WAITING FOR WIFI</source>
+          <target state="new">WAITING FOR WIFI</target>
+        </trans-unit>
+        <trans-unit id="DBError" translate="yes" xml:space="preserve">
+          <source>It seems your Database could be corrupted, restart application, if problem persists reinstall the application</source>
+          <target state="new">It seems your Database could be corrupted, restart application, if problem persists reinstall the application</target>
+        </trans-unit>
+        <trans-unit id="DisableStartAndStop" translate="yes" xml:space="preserve">
+          <source>Disable start&amp;stop</source>
+          <target state="translated">Desactivar Iniciar &amp; Pausar</target>
+        </trans-unit>
+        <trans-unit id="EnableStartAndStop" translate="yes" xml:space="preserve">
+          <source>Enable start&amp;stop</source>
+          <target state="translated">Activar Iniciar &amp; Pausar</target>
+        </trans-unit>
+        <trans-unit id="Translation" translate="yes" xml:space="preserve">
+          <source>Improve translation</source>
+          <target state="translated">Mejorar traducción</target>
+        </trans-unit>
+        <trans-unit id="pointinterest" translate="yes" xml:space="preserve">
+          <source>at {0} {1} {2}</source>
+          <target state="translated">de {0} {1} {2}</target>
+        </trans-unit>
+        <trans-unit id="AddPoint" translate="yes" xml:space="preserve">
+          <source>add point</source>
+          <target state="translated">Añadir punto</target>
+        </trans-unit>
+        <trans-unit id="PointDescription" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Descripción</target>
+        </trans-unit>
+        <trans-unit id="Ok" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="translated">Aceptar</target>
+        </trans-unit>
+        <trans-unit id="DeleteSessionL.Label" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Borrar</target>
+        </trans-unit>
+        <trans-unit id="Comment.Header" translate="yes" xml:space="preserve">
+          <source>Comment</source>
+          <target state="translated">Comentario</target>
+        </trans-unit>
+        <trans-unit id="NamePath.Header" translate="yes" xml:space="preserve">
+          <source>Path Name</source>
+          <target state="translated">Nombre ruta</target>
+        </trans-unit>
+        <trans-unit id="ReallyImportButton.Content" translate="yes" xml:space="preserve">
+          <source>Really Import</source>
+          <target state="translated">Importar</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo.Header" translate="yes" xml:space="preserve">
+          <source>Detail</source>
+          <target state="translated">Detalles</target>
+        </trans-unit>
+        <trans-unit id="GeneralInfo.Header" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="new">General</target>
+        </trans-unit>
+        <trans-unit id="GraphType3" translate="yes" xml:space="preserve">
+          <source>Yearly</source>
+          <target state="translated">Anual</target>
+        </trans-unit>
+        <trans-unit id="LapsInfo.Header" translate="yes" xml:space="preserve">
+          <source>Laps</source>
+          <target state="translated">Vueltas</target>
+        </trans-unit>
+        <trans-unit id="MapInfo.Header" translate="yes" xml:space="preserve">
+          <source>Map</source>
+          <target state="translated">Mapa</target>
+        </trans-unit>
+        <trans-unit id="PerfileInfo.Header" translate="yes" xml:space="preserve">
+          <source>Section</source>
+          <target state="translated">Sección</target>
+        </trans-unit>
+        <trans-unit id="DistanceH.Header" translate="yes" xml:space="preserve">
+          <source>Distance</source>
+          <target state="translated">Distancia</target>
+        </trans-unit>
+        <trans-unit id="pathPicker.Header" translate="yes" xml:space="preserve">
+          <source>Select a Path</source>
+          <target state="translated">Seleccionar ruta</target>
+        </trans-unit>
+        <trans-unit id="SessionType.Header" translate="yes" xml:space="preserve">
+          <source>Session Type</source>
+          <target state="translated">Tipo sesión</target>
+        </trans-unit>
+        <trans-unit id="DurationH.Header" translate="yes" xml:space="preserve">
+          <source>Duration</source>
+          <target state="translated">Duración</target>
+        </trans-unit>
+        <trans-unit id="acceptButton.Content" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="translated">Aceptar</target>
+        </trans-unit>
+        <trans-unit id="AcceptQuestionb.OffContent" translate="yes" xml:space="preserve">
+          <source>No Accept!</source>
+          <target state="translated">No estoy de acuerdo</target>
+        </trans-unit>
+        <trans-unit id="AcceptQuestionb.OnContent" translate="yes" xml:space="preserve">
+          <source>Accept!</source>
+          <target state="translated">De acuerdo</target>
+        </trans-unit>
+        <trans-unit id="dialog_No" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="new">No</target>
+        </trans-unit>
+        <trans-unit id="dialog_Yes" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="translated">Sí</target>
+        </trans-unit>
+        <trans-unit id="Gpx" translate="no" xml:space="preserve">
+          <source>Gpx</source>
+          <target state="final">Gpx</target>
+        </trans-unit>
+        <trans-unit id="Kml" translate="no" xml:space="preserve">
+          <source>Kml</source>
+          <target state="final">Kml</target>
+        </trans-unit>
+        <trans-unit id="ac00.Text" translate="yes" xml:space="preserve">
+          <source>On normal view</source>
+          <target state="translated">En vista normal</target>
+        </trans-unit>
+        <trans-unit id="ac0.Text" translate="yes" xml:space="preserve">
+          <source>Click on screen</source>
+          <target state="needs-review-translation">Pulsa en la pantalla</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ac1.Text" translate="yes" xml:space="preserve">
+          <source>Double Click on screen</source>
+          <target state="needs-review-translation">Doble pulsación en la pantalla</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ac10.Text" translate="yes" xml:space="preserve">
+          <source>Long click on screen to see distance between current position and this point</source>
+          <target state="translated">Pulsación larga en la pantalla para ver la distancia hasta este punto</target>
+        </trans-unit>
+        <trans-unit id="ac11.Text" translate="yes" xml:space="preserve">
+          <source>Double click to store a position</source>
+          <target state="translated">Doble pulsación para almacenar la posición</target>
+        </trans-unit>
+        <trans-unit id="ac12.Text" translate="yes" xml:space="preserve">
+          <source>To center map to current position</source>
+          <target state="translated">Para centrar el mapa en la posición</target>
+        </trans-unit>
+        <trans-unit id="ac13.Text" translate="yes" xml:space="preserve">
+          <source>To change map view</source>
+          <target state="translated">Para cambiar el modo del mapa</target>
+        </trans-unit>
+        <trans-unit id="ac14.Text" translate="yes" xml:space="preserve">
+          <source>To enable/disable compass</source>
+          <target state="translated">Para activar o desactivar el compass</target>
+        </trans-unit>
+        <trans-unit id="ac15.Text" translate="yes" xml:space="preserve">
+          <source>To enable/disable screen rotation</source>
+          <target state="translated">Para activar o desactivar la rotación </target>
+        </trans-unit>
+        <trans-unit id="ac16.Text" translate="yes" xml:space="preserve">
+          <source>You can disable this message and others by enabling expert mode in settings screen</source>
+          <target state="translated">Se puede desactivar este mensaje y los otros activando el modo experto, el configuración</target>
+        </trans-unit>
+        <trans-unit id="ac17.Text" translate="yes" xml:space="preserve">
+          <source>And now start</source>
+          <target state="translated">Pulsa la pantalla para empezar</target>
+        </trans-unit>
+        <trans-unit id="ac2.Text" translate="yes" xml:space="preserve">
+          <source>Long Click on screen</source>
+          <target state="needs-review-translation">Pulsación larga en la pantalla</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ac3.Text" translate="yes" xml:space="preserve">
+          <source>Down flip on screen</source>
+          <target state="needs-review-translation">Deslizar hacia abajo</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ac4.Text" translate="yes" xml:space="preserve">
+          <source>Up flip on screen</source>
+          <target state="needs-review-translation">Deslizar hacia arriba</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ac5.Text" translate="yes" xml:space="preserve">
+          <source>Right flip on screen</source>
+          <target state="needs-review-translation">Deslizar hacia la derecha</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ac6.Text" translate="yes" xml:space="preserve">
+          <source>Left flip on screen</source>
+          <target state="needs-review-translation">Deslizar hacia la izquierda</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ac7.Text" translate="yes" xml:space="preserve">
+          <source>To see map</source>
+          <target state="translated">Para ver el mapa</target>
+        </trans-unit>
+        <trans-unit id="ac8.Text" translate="yes" xml:space="preserve">
+          <source>To change to night/day mode</source>
+          <target state="translated">Para cambiar modo día o noche </target>
+        </trans-unit>
+        <trans-unit id="ac9.Text" translate="yes" xml:space="preserve">
+          <source>On map view</source>
+          <target state="translated">En vista con mapa</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
